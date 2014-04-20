@@ -1,0 +1,25 @@
+{
+  "name": "PG_Project",
+  "version": "0.0.1",
+  "author": "Philippe Gauthier",
+  "devDependencies": {
+    "gulp": "~3.6.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-concat": "~2.2.0",
+    "tiny-lr": "0.0.5",
+    "gulp-ruby-sass": "~0.4.1",
+    "gulp-clean": "~0.2.4",
+    "gulp-minify-css": "~0.3.0",
+    "orchestrator": "~0.3.3",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-uglify": "~0.2.1",
+    "gulp-notify": "~1.2.5",
+    "gulp-jshint": "~1.5.2",
+    "gulp-imagemin": "~0.1.5",
+    "gulp-cache": "~0.1.3",
+    "gulp-compass": "~1.1.8",
+    "compass": "~0.1.0",
+    "gulp-livereload": "~1.2.0",
+    "gulp-util": "~2.2.14"
+  }
+}

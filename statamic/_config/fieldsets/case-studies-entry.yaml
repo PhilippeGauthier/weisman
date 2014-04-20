@@ -1,0 +1,74 @@
+title: Case Studies Entry
+
+fields:
+
+  mainTitle:
+    display: Main Title
+    default:
+    type: text
+
+  subTitle:
+    display: Sub Title
+    default:
+    type: text
+
+  # username:
+  #   display: username
+  #   default:
+  #   type: text
+
+  # userWebsite_href:
+  #   display: userWebsite_href
+  #   default:
+  #   type: text
+
+  # userAvatarUrl_img:
+  #   display: userAvatarUrl_img
+  #   default:
+  #   type: text
+
+  # userLocation:
+  #   display: userLocatio
+  #   default:
+  #   type: text
+
+
+
+  content:
+    display: Caption
+    required: true
+    default:
+    type: redactor
+
+  displayPhoto: 
+    type: file
+    display: Display Photo
+    destination: assets/img/entries
+
+  gallery:
+    display: Photo Gallery
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      photo:
+        type: file
+        display: Photo
+        destination: assets/img/entries
+        show_thumbnail: true
+      username:
+        display: username
+        default:
+        type: text
+      userWebsite_href:
+        display: userWebsite_href
+        default:
+        type: text
+      userAvatarUrl_img:
+        display: userAvatarUrl_img
+        default:
+        type: text
+      userLocation:
+        display: userLocatio
+        default:
+        type: text
