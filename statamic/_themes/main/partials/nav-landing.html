@@ -1,0 +1,24 @@
+<div class="landing-nav left">
+	<h1>Adam Weisman</h1>
+	<br>
+	<h2>Sr. Art Director</h2>
+	<div class="border"></div>
+</div>
+
+<div class="landing-nav middle">
+	<ul>
+	{{ nav from="/"  }}
+		<li>
+			<a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}><h3>{{ title }}</h3></a>
+			<div class="border"></div>
+		</li>
+	{{ /nav }}
+	</ul>
+</div>
+
+<div class="landing-nav right">
+	<h4><a href="#">holler@me</a></h4>
+	<div class="border"></div>
+	<h4>408.605.8269</h4>
+	<div class="border"></div>
+</div>

@@ -9,55 +9,62 @@ $susy: (
 
 $small: 768px;
 $medium: 1000px;
-$large: 1200px;
+$large: 1240px;
 
 $small-screen-width: 30em;
 
 @include establish-baseline;
 
 html, body, #{headings()}, a, span, p {
-	color: $white;
-	// text-rendering: geometricPrecision;
+	color: $base-font-color;
+	font-family: $base-font-family;
 }
 
 html, body {
 	height: 100%;
 	margin: 0;
-	background: url('../img/background_1600x1600.png') center center no-repeat;
-	background-size: cover;
-	background-attachment:fixed;
+	background-color: $beige;
 
 	
 }
 html, body, p {
-	font-family: $base-font-family;
 	letter-spacing: .03rem;
 }
 
 
 h1 {
-	font-family: $headline-font;
-	@extend %t-strong;
+	margin-bottom: 12px;
 	@include responsiveTypeSize(xlarge);
-	color: $purple;
+}
+h2 {
+	font-family: "RBNo2.1a-medium";
 }
 
+h3,h4 {
+	font-family: "RBNo2.1a-book";
+	// a {
+	// 	font-family: "RBNo2.1a-light";
+	// }
+}
 h3 {
-	font-family: $subHeadline-font;
 	@include responsiveTypeSize(base);
-
 }
 
 
 p {
 	@include responsiveTypeSize(base);
 	@include trailer;
-	font-family: $base-font-family;
 	letter-spacing: .03rem;
 	&:first-of-type {
 		@include leader;
 	}
 	&:last-of-type {
 		@include padding-trailer;
+	}
+}
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
 	}
 }

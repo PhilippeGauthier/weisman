@@ -1,7 +1,25 @@
-<!-- {{ theme:partial src="entry" }}
-{{ theme:partial src="philosophy" }} -->
-{{ theme:partial src="case-studies-main" }}
-<!-- {{ theme:partial src="companies" }}
-{{ theme:partial src="bios" }}
-{{ theme:partial src="connect" }} -->
+<nav id="landing-nav">
+	<div class="container">
+	{{ theme:partial src="nav-landing" }}
+	</div>
+</nav>
 
+<div class="container">
+{{ entries:listing folder="portfolio" }}
+	
+	<div class="portfolio-item">
+      <a class="portfolio-image" href="{{ url }}">
+          {{ if mainImage|not_empty }}
+            <img src="{{ mainImage }}" alt="" class="article__img">
+          {{ endif }}
+          <div class="caption">
+            <h2 class="title">{{ title }}</h2>
+            <p class="subHeader">{{ subHeader }}</p>
+          </div>
+		  </a>
+	</div>
+  
+
+
+{{ /entries:listing }}
+</div>

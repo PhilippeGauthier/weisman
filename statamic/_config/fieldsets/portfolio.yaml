@@ -1,0 +1,18 @@
+fields:
+
+  mainImage: 
+    type: file
+    display: Landing Page Image
+    destination: assets/img/
+
+  subHeader:
+  	type: text
+
+  content:
+    display: Blog Entry
+    required: true
+    default:
+    type: redactor
+
+
+hide: true
