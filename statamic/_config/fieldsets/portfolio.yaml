@@ -13,6 +13,8 @@ fields:
     required: true
     default:
     type: redactor
+    image_dir: assets/img/
+    file_dir: assets/img/
 
 
 hide: true
