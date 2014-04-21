@@ -90,9 +90,9 @@
 .content-nav-main {
 	width: 100%;
 	position: fixed;
-	height: 100px;
 	z-index: 10;
 	padding-top: 36px;
+	padding-bottom: 50px;
 	background-color: $beige;
 	h3,h4 {
 		display: inline-block;
@@ -101,10 +101,58 @@
 		display: inline-block;
 		&.left {
 			margin-left: 20px;
+			li:first-of-type {
+				margin-bottom: 12px;
+				a {
+					border-bottom: 5px solid $green;
+				}
+			}
+			li:last-of-type {
+				a {
+					border-bottom: 3px solid $green;
+
+					&:after {
+						border-bottom: 3px solid $green;
+					}
+				}
+				.border {
+					width: 20px;
+					height: 2px;
+					background-color: $green;
+					content: "";
+					margin-top: 3px;
+				}
+			}
 		}
 		&.right {
 			margin-right: 20px;
 			float: right;
+			li a {
+				border-bottom: 3px solid $green;
+
+				&:after {
+					border-bottom: 3px solid $green;
+				}
+			}
+			.border {
+				width: 30px;
+				height: 2px;
+				background-color: $green;
+				content: "";
+				margin-top: 3px;
+				margin-bottom: 12px;
+			}
+			.paginate {
+				display: inline-block;
+				height: 30px;
+				width: 30px;
+				&.enabled {
+					background-color: $red;
+				}
+				&.disabled {
+					background-color: rgba($red,.8);
+				}
+			}
 		}
 	}
 }

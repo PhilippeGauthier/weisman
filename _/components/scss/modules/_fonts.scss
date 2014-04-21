@@ -6,19 +6,25 @@ src: url(../../main/fonts/Rene_Bieder-RBNo2.1a-BookItalic.otf);
 }
 
 @font-face {
-font-family: RBNo2.1a-book;
+font-family: 'RBNo2.1a-book';
 src: url(../../main/fonts/Rene_Bieder-RBNo2.1a-Book.otf);
 }
 
 @font-face {
-font-family: RBNo2.1a-Medium;
+font-family: 'RBNo2.1a-Medium';
 src: url(../../main/fonts/Rene_Bieder-RBNo2.1a-Medium.otf);
 }
 
 @font-face {
-font-family: RBNo2.1a-Light;
-src: url(../../main/fonts/Rene_Bieder-RBNo2.1a-Light.otf);
+font-family: 'RBNo2.1a-Light';
+src: url(../../main/fonts/Rene_Bieder-RBNo2.1a-Light.otf) format("opentype");;
 }
+
+@font-face {
+font-family: 'RBNo2.1a-BookItalic';
+src: url(../../main/fonts/Rene_Bieder-RBNo2.1a-LightItalic.otf);
+}
+
 
 
 @font-face {

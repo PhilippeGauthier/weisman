@@ -8,6 +8,22 @@ fields:
   subHeader:
   	type: text
 
+  fixedHeaderText:
+    display: Portfolio Page Fixed Header Text
+    type: redactor
+
+  categories:
+    display: Categories
+    type: suggest
+    create: true
+    multiple: true
+    instructions:
+      below: "Create or select an existing category."
+    taxonomy:
+      folder: portfolio #make sure you rename this to the folder name of your blog
+      type: categories
+
+
   content:
     display: Blog Entry
     required: true

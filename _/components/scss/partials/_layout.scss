@@ -79,6 +79,7 @@ section, .flex {
 
 .portfolio-item {
 	position: relative;
+	display: inline-block;
 }
 .portfolio-image {
 	width: 500px;
@@ -127,8 +128,42 @@ section, .flex {
 }
 
 .portfolio-page {
-	padding-top: 100px;
+	padding-top: 140px;
 	img {
 		max-width: 100%;
 	}
+	.fixed-header-text {
+		position: fixed;
+		background-color: $beige;
+		z-index: 10;
+		margin: 0;
+		padding: 0;
+		p {
+			margin: 0;
+			padding: 0;
+		}
+		.fixed-header-left {
+			@include span(9);
+			@include first;
+		}
+		.fixed-header-right {
+			@include span(last 3);
+			text-align: right;
+			p {
+				font-family: "RBNo2.1a-BookItalic";
+				color: $red;
+			}
+		}
+		.divider {
+			height: 2px;
+			width: 100%;
+			background-color: $red;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.portfolio-content {
+	padding-top: 100px;
 }
