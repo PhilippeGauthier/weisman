@@ -49,6 +49,7 @@ npm-debug.log
 /statamic/!_cache/index.html
 /statamic/_logs/*
 /statamic/!_logs/index.html
+.htaccess
 
 
 
