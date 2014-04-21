@@ -1,11 +1,23 @@
 <div class="content-nav-main">
 	<div class="content-nav left">
-		<h3>ADAM WEISMAN</h3><br>
-		<h4>WORK</h4>
+		<ul>
+		<li><a href="{{ homepage }}">Adam Weisman</a></li>
+		{{ nav from="/" exclude="about|resume" }}
+			<li><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }} </a>
+				{{ if is_current || is_parent }}
+				{{ if children }}
+				<ul>
+					{{ *recursive children* }}
+				</ul>
+				{{ endif }}
+				{{ endif }}
+			</li>
+			{{ /nav }}
+		</ul>
 	</div>
 	
 	<div class="content-nav right">
-		<h4>CONTACT</h4>
+		<a href="#"><h4>CONTACT</h4></a>
 		
 	</div>
 </div>

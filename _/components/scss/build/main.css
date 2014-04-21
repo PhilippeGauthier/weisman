@@ -865,55 +865,34 @@ section, .flex {
 
 /* line 83, ../partials/_layout.scss */
 .portfolio-image {
-  height: 280px;
+  width: 500px;
+  height: 200px;
   position: relative;
   top: 0;
   left: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 33.33333%;
-  float: left;
-  padding-left: 0.375em;
-  padding-right: 0.375em;
   background-color: rgba(206, 83, 77, 0);
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
-  /* line 63, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.1/sass/susy/language/susy/_gallery.scss */
-  .portfolio-image:nth-child(3n + 1) {
-    margin-left: 0;
-    margin-right: -100%;
-    clear: both; }
-  /* line 63, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.1/sass/susy/language/susy/_gallery.scss */
-  .portfolio-image:nth-child(3n + 2) {
-    margin-left: 33.33333%;
-    margin-right: -100%;
-    clear: none; }
-  /* line 63, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.1.1/sass/susy/language/susy/_gallery.scss */
-  .portfolio-image:nth-child(3n + 3) {
-    margin-left: 66.66667%;
-    margin-right: -100%;
-    clear: none; }
-  /* line 89, ../partials/_layout.scss */
+  /* line 90, ../partials/_layout.scss */
   .portfolio-image img {
     max-width: 100%;
     height: 100%; }
-  /* line 97, ../partials/_layout.scss */
+  /* line 98, ../partials/_layout.scss */
   .portfolio-image:hover {
     -moz-transition: 0.5s;
     -o-transition: 0.5s;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
-    /* line 100, ../partials/_layout.scss */
+    /* line 101, ../partials/_layout.scss */
     .portfolio-image:hover img {
       opacity: 0; }
-    /* line 103, ../partials/_layout.scss */
+    /* line 104, ../partials/_layout.scss */
     .portfolio-image:hover .caption {
       background-color: #ce534d;
       opacity: 1; }
-  /* line 108, ../partials/_layout.scss */
+  /* line 109, ../partials/_layout.scss */
   .portfolio-image .caption {
     display: inline-block;
     opacity: 0;
@@ -924,14 +903,17 @@ section, .flex {
     left: 0;
     right: 0;
     margin: auto; }
-    /* line 121, ../partials/_layout.scss */
+    /* line 122, ../partials/_layout.scss */
     .portfolio-image .caption p {
       margin: 0;
       padding: 0; }
 
-/* line 128, ../partials/_layout.scss */
+/* line 129, ../partials/_layout.scss */
 .portfolio-page {
   padding-top: 100px; }
+  /* line 131, ../partials/_layout.scss */
+  .portfolio-page img {
+    max-width: 100%; }
 
 /* line 3, ../partials/_modules.scss */
 .cbp-spmenu {

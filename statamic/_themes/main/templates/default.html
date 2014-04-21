@@ -10,7 +10,12 @@
 	<div class="portfolio-item">
       <a class="portfolio-image" href="{{ url }}">
           {{ if mainImage|not_empty }}
-            <img src="{{ mainImage }}" alt="" class="article__img">
+            <img src="{{ transform
+              src="{{ mainImage }}"
+              width="500"
+              height="200"
+              action="smart"
+            }}" alt="" class="portfolio_img">
           {{ endif }}
           <div class="caption">
             <h2 class="title">{{ title }}</h2>

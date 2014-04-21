@@ -15,6 +15,9 @@ fields:
     type: redactor
     image_dir: assets/img/
     file_dir: assets/img/
+    resize:
+      width: 1600
+      quality: 90
+      upsize: false
 
 
-hide: true
