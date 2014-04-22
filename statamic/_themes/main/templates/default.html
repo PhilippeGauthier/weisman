@@ -1,29 +1,28 @@
 <nav id="landing-nav">
 	<div class="container">
-	{{ theme:partial src="nav-landing" }}
+		{{ theme:partial src="nav-landing" }}
 	</div>
 </nav>
 
 <div class="container">
-{{ entries:listing folder="portfolio" }}
+	{{ entries:listing folder="portfolio" }}
 	
 	<div class="portfolio-item">
-      <a class="portfolio-image" href="{{ url }}">
-          {{ if mainImage|not_empty }}
-            <img src="{{ transform
-              src="{{ mainImage }}"
-              width="500"
-              height="200"
-              action="smart"
-            }}" alt="" class="portfolio_img">
-          {{ endif }}
-          <div class="caption">
-            <h2 class="title">{{ title }}</h2>
-            <p class="subHeader">{{ subHeader }}</p>
-          </div>
-		  </a>
-	</div>
-  
+		<a class="portfolio-image" href="{{ url }}">
+			<div class="caption"><h2 class="title">{{ title }}</h2>
+			<p class="subHeader">{{ subHeader }}</p></div>
+			{{ if mainImage|not_empty }}
+				<img src="{{ transform
+				src="{{ mainImage }}"
+				width="492"
+				height="200"
+				action="smart"
+				}}" alt="" class="portfolio_img">
+			{{ endif }}
+
+	</a>
+</div>
+
 
 
 {{ /entries:listing }}

@@ -39,6 +39,9 @@
 	}
 	&.right {
 		@include span(3);
+		li:hover .border {
+			width: 100%;
+		}
 	}
 	.border {
 		width: 60px;
@@ -101,14 +104,19 @@
 		display: inline-block;
 		&.left {
 			margin-left: 20px;
+			p {
+				margin: 0;
+				padding: 0;
+				display: inline-block;
+			}
 			li:first-of-type {
 				margin-bottom: 12px;
-				a {
+				a,p {
 					border-bottom: 5px solid $green;
 				}
 			}
 			li:last-of-type {
-				a {
+				a,p {
 					border-bottom: 3px solid $green;
 
 					&:after {
@@ -127,12 +135,22 @@
 		&.right {
 			margin-right: 20px;
 			float: right;
+			li:hover {
+				.border {
+					width: 100%;
+				}
+			}
 			li a {
-				border-bottom: 3px solid $green;
+				font-family: 'RBNo2.1a-Light';
 
+				border-bottom: 3px solid $green;
 				&:after {
 					border-bottom: 3px solid $green;
 				}
+			}
+			h4 {
+				margin-bottom: 2px;
+				font-size: 30px;
 			}
 			.border {
 				width: 30px;
@@ -141,16 +159,29 @@
 				content: "";
 				margin-top: 3px;
 				margin-bottom: 12px;
+				@include transition-property(width);
+				@include transition(.15s);
+				@include transition-timing-function(ease-in);
 			}
 			.paginate {
 				display: inline-block;
 				height: 30px;
 				width: 30px;
+				color: $beige;
+				font-size: 30px;
+				line-height: 24px;
+				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				font-weight: 100;
+				text-align: center;
 				&.enabled {
+					@include transition(.2s);
 					background-color: $red;
+					&:hover {
+						background-color: darken($red,5%);
+					}
 				}
 				&.disabled {
-					background-color: rgba($red,.8);
+					background-color: rgba($red,.6);
 				}
 			}
 		}

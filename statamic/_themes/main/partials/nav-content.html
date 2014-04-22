@@ -3,7 +3,7 @@
 		<ul>
 		<li><a href="{{ homepage }}">Adam Weisman</a></li>
 		{{ nav from="/" exclude="about|resume" }}
-			<li><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>Work</a>
+			<li><p>Work</p>
 			<div class="border"></div>
 				{{ if is_current || is_parent }}
 				{{ if children }}
@@ -20,30 +20,30 @@
 	<div class="content-nav right">
 		<ul>
 			<li>
-				<a href=""><h4>CONTACT</h4></a>
+				<a href="mailto:adweisman@gmail"><h4>CONTACT</h4></a>
+				<div class="border"></div>
 			</li>
 		</ul>
-		<div class="border"></div>
 
 			{{ entries:previous folder="portfolio" }}
 				{{ if !no_results }}
 					<a href="{{ url }}" class="older">
-						<span class="paginate previous enabled">P</span>
+						<span class="paginate previous enabled">&lt</span>
 						
 					</a>
 				{{ else}} 
-				<span class="paginate previous disabled">P</span>
+				<span class="paginate previous disabled">&lt;</span>
 				{{ endif }}
 			{{ /entries:previous }}
 			
 			{{ entries:next folder="portfolio" }}
 				{{ if !no_results }}
 					<a href="{{ url }}" class="older">
-						<span class="paginate previous enabled">N</span>
+						<span class="paginate previous enabled">&gt;</span>
 						
 					</a>
 				{{ else}} 
-				<span class="paginate previous disabled">N</span>
+				<span class="paginate previous disabled">&gt;</span>
 				{{ endif }}
 			{{ /entries:next }}
 	</div>
