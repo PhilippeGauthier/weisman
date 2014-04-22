@@ -1,23 +1,3 @@
-
-
-// Smooth Scroll
-
-// $(function() {
-//   $('a.menu-icon[href*=#]:not([href=#])').click(function() {
-//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-//       var target = $(this.hash);
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-//       if (target.length) {
-//         $('html,body').animate({
-//           scrollTop: target.offset().top
-//         }, 1000);
-//         return false;
-//       }
-//     }
-//   });
-// });
-
-
 /*global jQuery */
 /*jshint browser:true */
 /*!
@@ -101,13 +81,3 @@
   };
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
-
-
-$(".portfolio-content p").addClass('video-wrapper');
-
-
-$(document).ready(function(){
-  // Target your .container, .wrapper, .post, etc.
-  $(".video-wrapper").fitVids();
-});
-

@@ -47,7 +47,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['_/components/js/scrollspy.js','_/components/js/jquery.magnific-popup.js','_/components/js/scripts.js' ])
+  return gulp.src(['_/components/js/jquery.fitvids.js','_/components/js/scripts.js' ])
     // .pipe(jshint())
     // .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
