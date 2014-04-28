@@ -24,6 +24,7 @@ buttons:
  - '|'
  - image
  - video
+ - file
  - table
  - link
  - horizontalrule

@@ -7,18 +7,23 @@
 	margin-top: 36px;
 	vertical-align: top;
 	position: relative;
+
 	&.left {
 		@include pre(1);
-		@include span(4);
+		@include span(5);
 		text-align: right;
-		padding-right: 30px;
+		// padding-right: 30px;
 		.border {
 			margin-left: auto;
 			margin-right: 0;
 		}
 	}
-	&.middle {
-		@include span(3);
+	&.right {
+		@include span(last 6);
+	}
+	.details {
+		@include span(6);
+		clear: left;
 		text-align: left;
 		border-left: 3px solid $green;
 		padding-left: 30px;
@@ -31,14 +36,16 @@
 			margin-bottom: 0;
 		}
 		li {
-
+			&:nth-child(4n) {
+				clear: right;
+			}
 		}
 		li:hover .border {
 			width: 100%;
 		}
 	}
-	&.right {
-		@include span(3);
+	.contact {
+		@include span(4);
 		li:hover .border {
 			width: 100%;
 		}
@@ -51,7 +58,7 @@
 		margin-top: 3px;
 		margin-bottom: 10px;
 			@include transition-property(width);
-			@include transition(.15s);
+			@include transition(.35s);
 			@include transition-timing-function(ease-in);
 
 	}

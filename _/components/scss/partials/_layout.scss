@@ -119,6 +119,7 @@ section, .flex {
 		text-align: center;
 		transform-style: preserve-3d;
 		@include transition(all 1s);
+		backface-visibility: hidden;
 	}
 	.caption {
 		height: 100%;
@@ -195,7 +196,7 @@ section, .flex {
 			margin-bottom: 18px;
 		}
 		img {
-			margin-bottom: -18px;
+
 		}
 	}
 }

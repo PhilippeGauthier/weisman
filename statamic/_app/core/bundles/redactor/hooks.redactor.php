@@ -108,6 +108,8 @@ class Hooks_redactor extends Hooks
             if ($_FILES['file']['type'] == 'image/png'
             || $_FILES['file']['type'] == 'image/jpg'
             || $_FILES['file']['type'] == 'image/gif'
+            || $_FILES['file']['type'] == 'application/pdf'
+            || $_FILES['file']['type'] == 'application/x-download'
             || $_FILES['file']['type'] == 'image/jpeg') {
 
                 $file_info = pathinfo($_FILES['file']['name']);

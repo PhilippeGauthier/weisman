@@ -1,0 +1,42 @@
+title: resume
+include: meta                  # include the meta fields
+hide: true
+
+fields:
+
+  content:
+    display: Resume text
+    required: false
+    default:
+    type: redactor
+    image_dir: assets/img/
+    file_dir: assets/img/
+
+  resumes:
+    display: Resumes
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      resumeImage:
+        type: file
+        display: Resume Image
+        destination: assets/img
+        show_thumbnail: true
+      resumePdf:
+        type: file
+        display: Resume PDF
+        destination: assets/img
+        show_thumbnail: true
+      caption:
+        display: Caption
+        type: text
+        width: 50%
+
+
+
+
+
+
+
+

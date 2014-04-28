@@ -5,8 +5,8 @@
 	<div class="border"></div>
 </div>
 
-<div class="landing-nav middle">
-	<ul>
+<div class="landing-nav right">
+	<ul class="details">
 	{{ nav from="/"  }}
 		<li>
 			<a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}><h3>{{ title }}</h3></a>
@@ -14,9 +14,19 @@
 		</li>
 	{{ /nav }}
 	</ul>
+	<ul class="contact">
+		<li>
+			<a href="mailto:adweisman@gmail.com"><h4>holler@me</h4></a>
+			<div class="border"></div>
+		</li>
+		<li>
+			<h4>408.605.8269</h4>
+			<div class="border"></div>
+		</li>
+	</ul>
 </div>
 
-<div class="landing-nav right">
+<!-- <div class="landing-nav right">
 <ul>
 	<li>
 	<a href="mailto:adweisman@gmail.com"><h4>holler@me</h4></a>
@@ -27,4 +37,4 @@
 	<div class="border"></div>
 	</li>
 </ul>
-</div>
+</div> -->
