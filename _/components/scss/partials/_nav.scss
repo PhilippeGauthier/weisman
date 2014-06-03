@@ -29,6 +29,7 @@
 		clear: left;
 		margin-right: 20px;
 		text-align: left;
+		display: inline-block;
 		// border-left: 3px solid $green;
 		// padding-left: 30px;
 		// padding-right: 30px;
@@ -50,7 +51,8 @@
 		}
 	}
 	.contact {
-		@include span(6);
+		width: 283px;
+		display: inline-block;
 		li:hover .border {
 			width: 100%;
 			background-color: $red;
@@ -112,7 +114,7 @@
 	width: 100%;
 	position: fixed;
 	z-index: 10;
-	padding-top: 36px;
+	padding-top: 20px;
 	padding-bottom: 50px;
 	background-color: $background;
 	h3,h4 {
@@ -120,88 +122,62 @@
 	}
 	.content-nav {
 		display: inline-block;
-		&.left {
-			margin-left: 20px;
-			p {
-				margin: 0;
-				padding: 0;
-				display: inline-block;
+		margin: 0 20px 0;
+		h4 {
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+		li {
+			a,p {
+				border-bottom: 7px solid $green;
 			}
-			li:first-of-type {
-				margin-bottom: 12px;
-				a,p {
-					border-bottom: 5px solid $green;
-				}
-			}
-			li:last-of-type {
-				a,p {
-					border-bottom: 5px solid $green;
-
-					&:after {
-						border-bottom: 5px solid $green;
-					}
-				}
+			&:hover {
 				.border {
-					width: 20px;
-					height: 2px;
-					background-color: $green;
-					content: "";
-					margin-top: 5px;
+					width: 100%;
+					background-color: $red;
 				}
 			}
 		}
-		&.right {
-			margin-right: 20px;
-			float: right;
-			li:hover {
-				.border {
-					width: 100%;
-				}
-			}
-			li a {
-				font-family: 'RBNo2.1a-Light';
+		.border {
+			width: 20px;
+			height: 7px;
+			background-color: $green;
+			content: "";
+			margin-top: 8px;
+			margin-bottom: 12px;
+			@include transition-property(width);
+			@include transition(.15s);
+			@include transition-timing-function(ease-in);
+		}
+		.paginate {
+			display: inline-block;
+			height: 30px;
+			width: 30px;
+			color: $background;
+			font-size: 30px;
+			line-height: 24px;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-weight: 100;
+			text-align: center;
 
-				border-bottom: 5px solid $green;
-				&:after {
-					border-bottom: 5px solid $green;
+			&.enabled {
+				background-color: $red;
+				@include transition(.15s);
+				&:hover {
+					color: $green;
 				}
 			}
-			h4 {
-				margin-bottom: 2px;
-				font-size: 30px;
+			&.disabled {
+				background-color: rgba($red,.6);
 			}
+		}
+		&.right {
+			float: right;
 			.border {
 				width: 30px;
-				height: 5px;
-				background-color: $green;
-				content: "";
-				margin-top: 3px;
-				margin-bottom: 12px;
-				@include transition-property(width);
-				@include transition(.15s);
-				@include transition-timing-function(ease-in);
 			}
-			.paginate {
-				display: inline-block;
-				height: 30px;
-				width: 30px;
-				color: $background;
-				font-size: 30px;
-				line-height: 24px;
-				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-				font-weight: 100;
-				text-align: center;
-				&.enabled {
-					@include transition(.2s);
-					background-color: $red;
-					&:hover {
-						background-color: darken($red,5%);
-					}
-				}
-				&.disabled {
-					background-color: rgba($red,.6);
-				}
-			}
+
 		}
 	}
 }

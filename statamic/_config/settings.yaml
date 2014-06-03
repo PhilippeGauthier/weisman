@@ -21,7 +21,7 @@ _language: en
 _site_root: /
 
 # Name of your site
-_site_name: http://adweisman.com/
+_site_name: Adam Weisman
 
 # Change the folder name for your content directory
 _content_root: _content

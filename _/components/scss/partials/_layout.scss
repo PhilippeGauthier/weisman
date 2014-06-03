@@ -102,7 +102,8 @@ section, .flex {
 		backface-visibility: hidden;
 	}
 	h2 {
-		padding-top: 40px;
+		padding-top: 50px;
+		line-height: 40px;
 		font-family: 'Rene_Bieder-RBNo3.1-BlackDEMO';
 		font-size: 48px;
 	}
@@ -146,9 +147,21 @@ section, .flex {
 }
 
 .portfolio-page {
-	padding-top: 140px;
+	padding-top: 80px;
 	img {
 		max-width: 100%;
+	}
+	.container {
+	@include container();
+	@include breakpoint($small) {
+		max-width: 420px;
+	}
+	@include breakpoint($medium) {
+		max-width: 768px;
+	}
+	@include breakpoint($large) {
+		max-width: 1000px;
+	}
 	}
 	.fixed-header-text {
 		position: fixed;
@@ -161,7 +174,7 @@ section, .flex {
 			padding: 0;
 		}
 		.fixed-header-left {
-			@include span(9);
+			@include span(10);
 			@include first;
 			p {
 				font-family: "RBNo2.1a-medium";
@@ -170,7 +183,7 @@ section, .flex {
 			}
 		}
 		.fixed-header-right {
-			@include span(last 3);
+			@include span(last 2);
 			text-align: right;
 			p {
 				font-size: 22px;
