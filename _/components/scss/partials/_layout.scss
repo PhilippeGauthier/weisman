@@ -55,7 +55,7 @@ section, .flex {
 		max-width: 768px;
 	}
 	@include breakpoint($large) {
-		max-width: 1000px;
+		max-width: 1200px;
 	}
 	&.content {
 		justify-content: center;
@@ -80,13 +80,13 @@ section, .flex {
 .portfolio-item {
 	position: relative;
 	display: block;
-	margin-bottom: 16px;
-	@include gallery(6 of 12);
+	margin-bottom: 10px;
+	@include gallery(4 of 12);
 	color: $red;
 }
 .portfolio-image {
-	width: 492px;
-	height: 200px;
+	width: 395px;
+	height: 162px;
 	perspective: 1000px;
 	position: relative;
 	display: block;
@@ -94,6 +94,8 @@ section, .flex {
 		position: absolute;
 		left: 0;
 		top: 0;
+		max-width: 395px;
+		max-height: 162px;
 	}
 	img, h2, p {
 		vertical-align: middle;
@@ -109,7 +111,7 @@ section, .flex {
 		font-size: 26px;
 	}
 	h2,p, {
-		color: $beige;
+		color: $background;
 		display: block;
 		margin: 0 auto;
 		text-transform: uppercase;
@@ -150,7 +152,7 @@ section, .flex {
 	}
 	.fixed-header-text {
 		position: fixed;
-		background-color: $beige;
+		background-color: $background;
 		z-index: 10;
 		margin: 0;
 		padding: 0;

@@ -19,14 +19,19 @@
 	}
 	&.right {
 		@include span(last 6);
+		ul {
+			margin-top: 38px;
+		}
 	}
 	.details {
-		@include span(6);
+		width: 221px;
+		float: left;
 		clear: left;
+		margin-right: 20px;
 		text-align: left;
 		// border-left: 3px solid $green;
-		padding-left: 30px;
-		padding-right: 30px;
+		// padding-left: 30px;
+		// padding-right: 30px;
 
 		li:first-of-type {
 			text-transform: uppercase;
@@ -41,17 +46,19 @@
 		}
 		li:hover .border {
 			width: 100%;
+			background-color: $red;
 		}
 	}
 	.contact {
-		@include span(4);
+		@include span(6);
 		li:hover .border {
 			width: 100%;
+			background-color: $red;
 		}
 	}
 	.border {
 		width: 60px;
-		height: 2px;
+		height: 5px;
 		background-color: $green;
 		content: "";
 		margin-top: 3px;
@@ -78,12 +85,17 @@
 		padding-bottom: 3px;
 		margin-top: 0;
 		margin-bottom: 0;
+		line-height: .8em;
 	}
 	h3,h4 {
 		margin: 0;
 		padding-bottom: 0;
 		border-bottom: 5px solid $green;
 		text-align: left;
+	}
+	h4 {
+		margin-top: 4px;
+		line-height: 1.05em;
 	}
 	li  {
 		&:last-of-type h3 {
@@ -102,7 +114,7 @@
 	z-index: 10;
 	padding-top: 36px;
 	padding-bottom: 50px;
-	background-color: $beige;
+	background-color: $background;
 	h3,h4 {
 		display: inline-block;
 	}
@@ -123,10 +135,10 @@
 			}
 			li:last-of-type {
 				a,p {
-					border-bottom: 3px solid $green;
+					border-bottom: 5px solid $green;
 
 					&:after {
-						border-bottom: 3px solid $green;
+						border-bottom: 5px solid $green;
 					}
 				}
 				.border {
@@ -134,7 +146,7 @@
 					height: 2px;
 					background-color: $green;
 					content: "";
-					margin-top: 3px;
+					margin-top: 5px;
 				}
 			}
 		}
@@ -149,9 +161,9 @@
 			li a {
 				font-family: 'RBNo2.1a-Light';
 
-				border-bottom: 3px solid $green;
+				border-bottom: 5px solid $green;
 				&:after {
-					border-bottom: 3px solid $green;
+					border-bottom: 5px solid $green;
 				}
 			}
 			h4 {
@@ -160,7 +172,7 @@
 			}
 			.border {
 				width: 30px;
-				height: 2px;
+				height: 5px;
 				background-color: $green;
 				content: "";
 				margin-top: 3px;
@@ -173,7 +185,7 @@
 				display: inline-block;
 				height: 30px;
 				width: 30px;
-				color: $beige;
+				color: $background;
 				font-size: 30px;
 				line-height: 24px;
 				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
