@@ -118,6 +118,9 @@ $app->get('/_add-ons/(:segments+)', function($segments = array()) use ($app) {
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 $app->map('/(:segments+)', function ($segments = array()) use ($app) {
+    
+    global $is_debuggable_route;
+    $is_debuggable_route = true;
 
     /*
     |--------------------------------------------------------------------------
@@ -152,7 +155,7 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
     // segments
     foreach ($segments as $key => $seg) {
         $count                            = $key + 1;
-        $app->config['segment_' . $count] = URL::sanitize($seg);
+        $app->config['segment_' . $count] = $seg;  // segments are already sanitized
     }
     $app->config['last_segment'] = end($segments);
 
@@ -259,7 +262,7 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
 
         $route     = $current_route;
         $template  = $route;
-        $data      = $app->config;  // start with the current global vars
+        $data      = Content::get($complete_current_url) + $app->config;
 
         if (is_array($route)) {
             $template = isset($route['template']) ? $route['template'] : 'default';
@@ -297,6 +300,12 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
         $data                = Content::get($complete_current_url);
         $data['current_url'] = $current_url;
         $data['slug']        = basename($current_url);
+        
+        // if this is an entry, default to the `post` template
+        if ($data['_is_entry']) {
+            $template_list[] = array_get($data, '_template', 'default');
+            $template_list[] = "post";
+        }
 
         if ($path !== "/404") {
             $content_found = true;
@@ -321,7 +330,12 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
         }
 
         // alter the response code if you want
-        $response_code = array_get($data, '_response', $response_code);
+        $response_code = (int) array_get($data, '_response', $response_code);
+        
+        // if the response_code was set to 404, show a 404
+        if ($response_code === 404) {
+            $content_found = false;
+        }
     }
 
     // Nothing found. 404 O'Clock.
@@ -469,6 +483,93 @@ $app->map('/(:segments+)', function ($segments = array()) use ($app) {
     */
 
     Hook::run('_render', 'before');
+
+    /*
+    |--------------------------------------------------------------------------
+    | HTTP Caching
+    |--------------------------------------------------------------------------
+    |
+    | We'll always set the last modified header, but leave the
+    | cache_expires option to people's discretion and configuration.
+    |
+    */
+
+    if (array_get($data, '_http_cache_expires', Config::get('http_cache_expires', false))) {
+        $app->lastModified(Cache::getLastCacheUpdate());
+        $app->expires('+'.Config::get('http_cache_expires', '30 minutes'));
+    }
+
+    // and go!
+    $app->render(null, $data, $response_code);
+    $app->halt($response_code, ob_get_clean());
+
+})->via('GET', 'POST', 'HEAD');
+
+// a second route that captures all routes, but will always return the 404 page
+$app->map('/(:segments+)', function ($segments = array()) use ($app) {
+    global $is_debuggable_route;
+    $is_debuggable_route = true;
+
+    // clean segments
+    $segments = URL::sanitize($segments);
+
+    // segments
+    foreach ($segments as $key => $seg) {
+        $count                            = $key + 1;
+        $app->config['segment_' . $count] = $seg;
+    }
+    $app->config['last_segment'] = end($segments);
+
+    $path = '/404';
+
+    $app->config['current_path'] = $path;
+
+    // init some variables for below
+    $app->config['current_url']  = $app->config['current_path'];
+    $app->config['current_path'] = $path; # override global current_path
+
+    // Nothing found. 404 O'Clock.
+    // determine where user came from for log message
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        $url_parts = parse_url($_SERVER['HTTP_REFERER']);
+
+        // get local referrer
+        $local_referrer = $url_parts['path'];
+        $local_referrer .= (isset($url_parts['query']) && $url_parts['query']) ? '?' . $url_parts['query'] : '';
+        $local_referrer .= (isset($url_parts['fragment']) && $url_parts['fragment']) ? '#' . $url_parts['fragment'] : '';
+
+        if (strstr($_SERVER['HTTP_REFERER'], $_SERVER['HTTP_HOST']) !== false) {
+            // the call came from inside the house!
+            $more   = 'There is a bad link on <a href="' . $local_referrer . '">' . $local_referrer . '</a>.';
+            $aspect = 'page';
+        } else {
+            // external site linked to here
+            $more   = 'User clicked an outside bad link at <a href="' . $_SERVER['HTTP_REFERER'] . '">' . $_SERVER['HTTP_REFERER'] . '</a>.';
+            $aspect = 'external';
+        }
+    } else {
+        // user typing error
+        $more   = 'Visitor came directly to this page and may have typed the URL incorrectly.';
+        $aspect = 'visitor';
+    }
+
+    Log::error("404 - Page not found. " . $more, $aspect, "content");
+
+    $data          = Content::get(Path::tidy(Config::getSiteRoot() . "/404"));
+    $template_list = array('404');
+    $response_code = 404;
+
+    // set template and layout
+    if (isset($data['_template'])) {
+        $template_list[] = $data['_template'];
+    }
+
+    if (isset($data['_layout'])) {
+        Statamic_View::set_layout("layouts/{$data['_layout']}");
+    }
+
+    // set up the view
+    Statamic_View::set_templates(array_reverse($template_list));
 
     /*
     |--------------------------------------------------------------------------

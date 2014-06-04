@@ -228,12 +228,11 @@ $(function() {
   /////////////////////////////////////////
 
     $(document).ready(function() {
-        var $slug = $('#publish-slug'),
+        var $slug = $('#publish-slug.new-slug'),
             $title = $('#publish-title');
         
         if ($slug.length) {
             // the slug field is on this page
-            if ($slug.val() !== '') {
                 // slug does not already exist in the system
                 $title
                     .on('keyup', function() {
@@ -261,7 +260,6 @@ $(function() {
                         // if someone edits the slug manually, don't allow title to auto-slug
                         $title.data('slug-edited', true);
                     })
-            }
         }
     });
 
@@ -291,6 +289,9 @@ $(function() {
   // The Grid
   //
   /////////////////////////////////////////
+
+  // Patch to rename the ids to something, anything unique
+  $('#rename_me').attr('id', randomString());
 
   var checkGridState = function($grid) {
     var opacity,
@@ -339,6 +340,10 @@ $(function() {
       });
 
       $(this).attr("name", newName);
+
+      // Patch to rename the ids to something, anything unique
+      $('#rename_me').attr('id', randomString());
+
     });
   };
 
@@ -514,4 +519,17 @@ $(function() {
   //     //do stuff on release
   // });
 
+  function randomString(length) {
+      var string = '',
+          length = length || 32,
+          possible = "BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxwz0123456789";
+
+      for (var i=0; i < length; i++)
+          string += possible.charAt(Math.floor(Math.random() * possible.length));
+
+      return string;
+  }
+
 });
+
+

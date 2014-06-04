@@ -49,7 +49,12 @@ class File
      */
     public static function get($path, $default = null)
     {
-        return (File::exists($path)) ? file_get_contents($path) : Helper::resolveValue($default);
+        if (File::exists($path)) {
+            Debug::increment('files', 'opened');
+            return file_get_contents($path);
+        } else {
+            return Helper::resolveValue($default);
+        }
     }
 
 
@@ -62,6 +67,7 @@ class File
      */
     public static function put($filename, $content, $mode = null)
     {
+        Debug::increment('files', 'written');
         $fs = new Filesystem();
         
         if (File::exists($filename)) {
@@ -83,6 +89,8 @@ class File
      */
     public static function append($path, $data)
     {
+        Debug::increment('files', 'written');
+        Debug::increment('files', 'appended');
         Folder::make(dirname($path));
         return file_put_contents($path, $data, LOCK_EX | FILE_APPEND);
     }
@@ -97,6 +105,8 @@ class File
      */
     public static function prepend($path, $data)
     {
+        Debug::increment('files', 'written');
+        Debug::increment('files', 'prepended');
         Folder::make(dirname($path));
         return file_put_contents($path, $data . File::get($path, ""), LOCK_EX);
     }
@@ -110,6 +120,7 @@ class File
      */
     public static function delete($files)
     {
+        Debug::increment('files', 'deleted');
         $fs = new Filesystem();
         
         $fs->remove($files);
@@ -126,6 +137,7 @@ class File
      */
     public static function move($origin, $target, $overwrite = false)
     {
+        Debug::increment('files', 'moved');
         $fs = new Filesystem();
 
         $fs->rename($origin, $target, $overwrite);
@@ -141,6 +153,7 @@ class File
      */
     public static function rename($origin, $target, $overwrite = false)
     {
+        Debug::increment('files', 'renamed');
         $fs = new Filesystem();
 
         if ( ! self::inBasePath($origin)) {
@@ -193,6 +206,7 @@ class File
      */
     public static function copy($originFile, $targetFile, $override = false)
     {
+        Debug::increment('files', 'copied');
         $fs = new Filesystem();
 
         $fs->copy($originFile, $targetFile, $override);
@@ -208,6 +222,7 @@ class File
      */
     public static function buildContent(Array $data, $content)
     {
+        Debug::increment('content', 'files_built');
         $file_content  = "---\n";
         $file_content .= preg_replace('/\A^---\s/ism', "", YAML::dump($data));
         $file_content .= "---\n";
@@ -252,10 +267,11 @@ class File
         return filesize($path);
     }
 
+    
     /**
      * Get the human file size of a given file.
      *
-     * @param  string  $path  Path of file
+     * @param int  $bytes  Number of bytes
      * @return int
      */
     public static function getHumanSize($bytes)

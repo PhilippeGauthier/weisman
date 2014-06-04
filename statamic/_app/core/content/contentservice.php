@@ -227,7 +227,7 @@ class ContentService
                 'depth' => $current_depth,
                 'children' => self::getContentTree($url, $depth - 1, $folders_only, $include_entries, $show_hidden, $include_content, $exclude),
                 'is_current' => (URL::getCurrent() == $url),
-                'is_parent' => (URL::getCurrent() != $url && Pattern::startsWith(URL::getCurrent(), $url)),
+                'is_parent' => (URL::getCurrent() != $url && Pattern::startsWith(URL::getCurrent(), $url . '/')),
                 'is_entry' => $data['is_entry'],
                 'is_page' => $data['is_page'],
                 'is_folder' => ($data['type'] == 'folder'),

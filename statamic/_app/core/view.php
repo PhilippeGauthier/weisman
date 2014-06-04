@@ -57,15 +57,25 @@ class Statamic_View extends \Slim\View
 
         foreach ($list as $template) {
             $template_path = Path::assemble(BASE_PATH, Config::getTemplatesPath(), 'templates', $template);
+            $override_path = Path::assemble(BASE_PATH, Config::getThemesPath(), Config::getTheme(), 'admin', $template);
 
             if (File::exists($template_path . '.html') || file_exists($template_path . '.php')) {
                 // set debug information
+                Debug::setValue('template', $template);
+                Debug::setvalue('layout', str_replace('layouts/', '', self::$_layout));
+                Debug::setValue('statamic_version', STATAMIC_VERSION);
+                Debug::setValue('php_version', phpversion());
+                Debug::setValue('theme', array_get($this->data, '_theme', null));
+                Debug::setValue('environment', array_get($this->data, 'environment', '(none)'));
+                
                 $this->data['_debug'] = array(
-                    'template'     => $template,
-                    'layout'       => str_replace('layouts/', '', self::$_layout),
-                    'version'      => STATAMIC_VERSION,
-                    'theme'        => array_get($this->data, '_theme', null),
-                    'environment'  => array_get($this->data, 'environment', "(no environment matched)")
+                    'template'          => Debug::getValue('template'),
+                    'layout'            => Debug::getValue('layout'),
+                    'version'           => Debug::getValue('statamic_version'),
+                    'statamic_version'  => Debug::getValue('statamic_version'),
+                    'php_version'       => Debug::getValue('php_version'),
+                    'theme'             => Debug::getValue('theme'),
+                    'environment'       => Debug::getValue('environment')
                 );
                 
                 # standard lex-parsed template
@@ -78,11 +88,15 @@ class Statamic_View extends \Slim\View
                     break;
 
                 # lets forge into raw data
-                } elseif (File::exists($template_path . '.php')) {
+                } elseif (File::exists($override_path . '.php') || File::exists($template_path . '.php')) {
 
                     $template_type = 'php';
                     extract($this->data);
                     ob_start();
+
+                    if (File::exists($override_path . '.php')) {
+                        $template_path = $override_path;
+                    }
 
                     require $template_path . ".php";
                     $html = ob_get_clean();
@@ -94,7 +108,16 @@ class Statamic_View extends \Slim\View
             }
         }
 
-        return $this->_render_layout($html, $template_type);
+        // get rendered HTML
+        $rendered = $this->_render_layout($html, $template_type);
+
+        // store it into the HTML cache if needed
+        if (Addon::getAPI('html_caching')->isEnabled()) {
+            Addon::getAPI('html_caching')->putCachedPage($rendered);
+        }
+        
+        // return rendered HTML
+        return $rendered;
     }
 
     /**
@@ -200,6 +223,8 @@ class Statamic_View extends \Slim\View
             $plug->attributes = $attributes;
             $plug->content    = $content;
             $plug->context    = $context;
+
+            Debug::increment('addons_called', 'plugins');
             
             $output = $plug->$call();
         }

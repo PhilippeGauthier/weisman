@@ -19,11 +19,8 @@ class Slug
      * @param array  $options  Array of options for how slugs are created
      * @return string
      */
-    public static function make($string, $options=null)
+    public static function make($string, $options=array())
     {
-        // standardize $options
-        $options = ($options && !is_array($options)) ? array('separator' => $options) : array();
-        
         // merge in custom replacements set in settings
         if (Config::get('custom_transliteration') && is_array(Config::get('custom_transliteration'))) {
             if (!isset($options['custom_replacements']) || !is_array($options['custom_replacements'])) {

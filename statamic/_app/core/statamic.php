@@ -372,6 +372,7 @@ class Statamic
         $app->config['post']     = URL::sanitize($_POST);
         $app->config['get_post'] = $app->config['get'] + $app->config['post'];
         $app->config['homepage'] = Config::getSiteRoot();
+        $app->config['now']      = time();
     }
 
     public static function get_entry_type($path)

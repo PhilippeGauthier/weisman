@@ -19,6 +19,9 @@ class Cache
      */
     public static function update()
     {
+        // start measuring
+        $content_hash = Debug::markStart('content_cache');
+        
         // track if any files have changed
         $files_changed     = false;
         $settings_changed  = false;
@@ -42,6 +45,10 @@ class Cache
             $cache = self::getCleanCacheArray();
         }
         $last = File::get($time_file);
+
+
+        // start measuring settings hash
+        $settings_hash = Debug::markStart('settings_cache');
         
         // check for current and new settings
         $settings = unserialize(File::get($settings_file));
@@ -88,6 +95,9 @@ class Cache
             $settings  = $current_settings;
             $last      = null;
         }
+        
+        // mark end of settings hash measuring
+        Debug::markEnd($settings_hash);
 
         // grab a list of all content files
         $finder = new Finder();
@@ -395,10 +405,17 @@ class Cache
                 }
             }
         }
+        
+        // mark ending of content cache measuring
+        Debug::markEnd($content_hash);
 
+        
         // build member cache
         // ----------------------------------------------------------------
 
+        // start measuring
+        $member_hash = Debug::markStart('member_cache');
+        
         // have members changed?
         $members_changed = false;
 
@@ -490,9 +507,16 @@ class Cache
             }
         }
 
+        // mark ending of member cache measuring
+        Debug::markEnd($member_hash);
+
+        
         
         // write to caches
         // --------------------------------------------------------------------
+
+        // add file-writing to content-cache actions
+        $content_hash = Debug::markStart('content_cache');
         
         if ($files_changed) {
             // store the content cache
@@ -515,7 +539,13 @@ class Cache
                 return false;
             }
         }
+        
+        // mark ending of content cache file write measuring
+        Debug::markEnd($content_hash);
 
+        // add file-writing to settings-cache actions
+        $settings_hash = Debug::markStart('settings_cache');
+        
         // store the settings cache
         if ($settings_changed) {
             if (File::put($settings_file, serialize($settings)) === false) {
@@ -527,6 +557,12 @@ class Cache
                 return false;
             }
         }
+
+        // mark ending of settings cache file write measuring
+        Debug::markEnd($settings_hash);
+
+        // add file-writing to settings-cache actions
+        $member_hash = Debug::markStart('member_cache');
         
         // store the members cache
         if ($members_changed) {
@@ -539,6 +575,9 @@ class Cache
                 return false;
             }
         }
+
+        // mark ending of member cache file write measuring
+        Debug::markEnd($member_hash);
         
         File::put($time_file, $now);
         return true;
@@ -566,8 +605,33 @@ class Cache
         $cache_file = BASE_PATH . '/_cache/_app/content/content.php';
         rd(unserialize(File::get($cache_file)));
     }
-    
-    
+
+
+    /**
+     * Checks to see if the cache file exists
+     * 
+     * @return boolean
+     */
+    public static function exists()
+    {
+        $caches = array(
+            'content'   => BASE_PATH . '/_cache/_app/content/content.php',
+            'settings'  => BASE_PATH . '/_cache/_app/content/settings.php',
+            'structure' => BASE_PATH . '/_cache/_app/content/structure.php',
+            'time'      => BASE_PATH . '/_cache/_app/content/last.php',
+            'members'   => BASE_PATH . '/_cache/_app/members/members.php'
+        );
+        
+        foreach ($caches as $cache) {
+            if (!File::exists($cache) || !strlen(File::get($cache))) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+
     /**
      * Returns a clean cache array for filling
      * 
