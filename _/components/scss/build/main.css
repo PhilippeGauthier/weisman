@@ -912,11 +912,12 @@ section, .flex {
 
 /* line 149, ../partials/_layout.scss */
 .portfolio-page {
+  position: relative;
   padding-top: 80px; }
-  /* line 151, ../partials/_layout.scss */
+  /* line 152, ../partials/_layout.scss */
   .portfolio-page img {
     max-width: 100%; }
-  /* line 154, ../partials/_layout.scss */
+  /* line 155, ../partials/_layout.scss */
   .portfolio-page .container {
     max-width: 36.875em;
     margin-left: auto;
@@ -927,52 +928,69 @@ section, .flex {
       display: block;
       clear: both; }
     @media (min-width: 420px) {
-      /* line 154, ../partials/_layout.scss */
+      /* line 155, ../partials/_layout.scss */
       .portfolio-page .container {
         max-width: 420px; } }
     @media (min-width: 768px) {
-      /* line 154, ../partials/_layout.scss */
+      /* line 155, ../partials/_layout.scss */
       .portfolio-page .container {
         max-width: 768px; } }
     @media (min-width: 1200px) {
-      /* line 154, ../partials/_layout.scss */
+      /* line 155, ../partials/_layout.scss */
       .portfolio-page .container {
         max-width: 1000px; } }
-  /* line 166, ../partials/_layout.scss */
+  /* line 167, ../partials/_layout.scss */
   .portfolio-page .fixed-header-text {
     position: fixed;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
     background-color: #d8d8d8;
     z-index: 10;
     margin: 0;
     padding: 0; }
-    /* line 172, ../partials/_layout.scss */
+    @media (min-width: 420px) {
+      /* line 167, ../partials/_layout.scss */
+      .portfolio-page .fixed-header-text {
+        max-width: 420px; } }
+    @media (min-width: 768px) {
+      /* line 167, ../partials/_layout.scss */
+      .portfolio-page .fixed-header-text {
+        max-width: 768px; } }
+    @media (min-width: 1200px) {
+      /* line 167, ../partials/_layout.scss */
+      .portfolio-page .fixed-header-text {
+        max-width: 1000px; } }
+    /* line 183, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text p {
       margin: 0;
       padding: 0; }
-    /* line 176, ../partials/_layout.scss */
+    /* line 187, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .fixed-header-left {
       width: 83.05085%;
       float: left;
       margin-right: 1.69492%;
       margin-left: 0; }
-      /* line 179, ../partials/_layout.scss */
+      /* line 190, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text .fixed-header-left p {
         font-family: "RBNo2.1a-medium";
         font-size: 19px;
-        line-height: 26px; }
-    /* line 185, ../partials/_layout.scss */
+        line-height: 26px;
+        min-height: 52px; }
+    /* line 197, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .fixed-header-right {
       width: 15.25424%;
       float: right;
       margin-right: 0;
       text-align: right; }
-      /* line 188, ../partials/_layout.scss */
+      /* line 200, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text .fixed-header-right p {
         font-size: 22px;
         line-height: 22px;
         font-family: "RBNo2.1a-BookItalic";
         color: #ce534d; }
-    /* line 195, ../partials/_layout.scss */
+    /* line 207, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .divider {
       height: 2px;
       width: 100%;
@@ -980,14 +998,14 @@ section, .flex {
       margin-top: 10px;
       margin-bottom: 20px; }
 
-/* line 205, ../partials/_layout.scss */
+/* line 217, ../partials/_layout.scss */
 .portfolio-content {
   padding-top: 50px; }
-  /* line 207, ../partials/_layout.scss */
+  /* line 219, ../partials/_layout.scss */
   .portfolio-content p {
     font-family: "RBNo2.1a-medium";
     font-size: 18px; }
-    /* line 210, ../partials/_layout.scss */
+    /* line 222, ../partials/_layout.scss */
     .portfolio-content p:last-of-type {
       margin-bottom: 18px; }
 

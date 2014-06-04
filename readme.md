@@ -8,6 +8,11 @@ Apache setup
 #       Require all granted
 #</Directory>
 
+Make sure you have the GD library installed for PHP
+
+sudo apt-get install php5-gd
+sudo a2enmod rewrite
+
 Statamic setup
 
 1) Change environment settings within statamic/_config/environments/*.yaml
