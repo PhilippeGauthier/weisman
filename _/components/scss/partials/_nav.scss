@@ -20,7 +20,7 @@
 	&.right {
 		@include span(last 6);
 		ul {
-			margin-top: 38px;
+			margin-top: 8px;
 		}
 	}
 	.details {
@@ -37,8 +37,9 @@
 		li:first-of-type {
 			text-transform: uppercase;
 		}
-		li:last-of-type .border {
+		li:last-of-type  {
 			margin-bottom: 0;
+			margin-top: 17px;
 		}
 		li {
 			&:nth-child(4n) {
