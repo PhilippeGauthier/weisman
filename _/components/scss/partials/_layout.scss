@@ -200,7 +200,8 @@ section, .flex {
 		}
 		.fixed-header-right {
 			text-align: right;
-			display: inline-block;
+			flex: 1 1 auto;
+			min-width: 130px;
 			p {
 				font-size: 22px;
 				line-height: 22px;

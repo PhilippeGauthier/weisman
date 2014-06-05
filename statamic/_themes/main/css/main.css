@@ -1029,28 +1029,32 @@ section, .flex {
     /* line 201, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .fixed-header-right {
       text-align: right;
-      display: inline-block; }
-      /* line 204, ../partials/_layout.scss */
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      min-width: 130px; }
+      /* line 205, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text .fixed-header-right p {
         font-size: 22px;
         line-height: 22px;
         font-family: "RBNo2.1a-BookItalic";
         color: #ce534d; }
-    /* line 211, ../partials/_layout.scss */
+    /* line 212, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .divider {
       height: 2px;
       width: 100%;
       background-color: #ce534d;
       margin-top: 10px; }
 
-/* line 220, ../partials/_layout.scss */
+/* line 221, ../partials/_layout.scss */
 .portfolio-content {
   padding-top: 50px; }
-  /* line 222, ../partials/_layout.scss */
+  /* line 223, ../partials/_layout.scss */
   .portfolio-content p {
     font-family: "RBNo2.1a-medium";
     font-size: 18px; }
-    /* line 225, ../partials/_layout.scss */
+    /* line 226, ../partials/_layout.scss */
     .portfolio-content p:last-of-type {
       margin-bottom: 18px; }
 
