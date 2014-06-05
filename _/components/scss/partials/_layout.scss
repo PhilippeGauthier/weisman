@@ -167,15 +167,15 @@ section, .flex {
 	.fixed-header-text {
 		position: fixed;
 		@include span (12);
-	@include breakpoint($small) {
-		max-width: 420px;
-	}
-	@include breakpoint($medium) {
-		max-width: 768px;
-	}
-	@include breakpoint($large) {
-		max-width: 1000px;
-	}
+		@include breakpoint($small) {
+			max-width: 420px;
+		}
+		@include breakpoint($medium) {
+			max-width: 768px;
+		}
+		@include breakpoint($large) {
+			max-width: 1000px;
+		}
 		background-color: $background;
 		z-index: 10;
 		margin: 0;
@@ -215,7 +215,7 @@ section, .flex {
 }
 
 .portfolio-content {
-	padding-top: 95px;
+	padding-top: 50px;
 	p {
 		font-family: "RBNo2.1a-medium";
 		font-size: 18px;

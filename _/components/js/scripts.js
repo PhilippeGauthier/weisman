@@ -111,3 +111,11 @@ $(document).ready(function(){
   $(".video-wrapper").fitVids();
 });
 
+$(document).ready(function(){
+  var headerHeight = $('.fixed-header-text').height();
+  $('.portfolio-content').css("padding-top",headerHeight+'px');
+
+});
+
+
+
