@@ -950,7 +950,7 @@ section, .flex {
     z-index: 10;
     margin: 0;
     padding: 0;
-    padding-bottom: 22px; }
+    min-height: 50px !important; }
     @media (min-width: 420px) {
       /* line 167, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text {
