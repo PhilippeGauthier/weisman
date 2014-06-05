@@ -187,11 +187,11 @@ section, .flex {
 		.fixed-header-left {
 			@include span(10);
 			@include first;
+			min-height: 52px;
 			p {
 				font-family: "RBNo2.1a-medium";
 				font-size: 19px;
 				line-height: 26px;
-				min-height: 52px;
 			}
 		}
 		.fixed-header-right {
