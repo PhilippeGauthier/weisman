@@ -101,22 +101,24 @@ section, .flex {
 		vertical-align: middle;
 		backface-visibility: hidden;
 	}
-	h2 {
-		line-height: 48px;
-		font-family: 'Rene_Bieder-RBNo3.1-BlackDEMO';
-		font-size: 48px;
-	}
-	p {
-		font-family: 'RBNo2.1a-book';
-		font-size: 30px;
-		line-height: 30px;
-	}
+
 	h2,p, {
 		color: $background;
 		display: block;
 		margin: 0 auto;
 		text-transform: uppercase;
-
+		vertical-align: baseline;
+	}
+	h2 {
+		line-height: 48px;
+		font-family: 'Rene_Bieder-RBNo3.1-BlackDEMO';
+		font-size: 48px;
+		margin-top: 6px;
+	}
+	p {
+		font-family: 'RBNo2.1a-book';
+		font-size: 30px;
+		line-height: 30px;
 	}
 
 	.caption, img {
@@ -131,7 +133,10 @@ section, .flex {
 		width: 100%;
 		transform: rotateY(-180deg);
 		color: white;
+		display: table;
 		div {
+			display: table-cell;
+			vertical-align: middle;
 			position: relative;
 		  	top: 50%;
 		  	transform: translateY(-50%);
