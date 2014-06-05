@@ -1001,11 +1001,14 @@ section, .flex {
 /* line 221, ../partials/_layout.scss */
 .portfolio-content {
   padding-top: 50px; }
-  /* line 223, ../partials/_layout.scss */
+  /* line 222, ../partials/_layout.scss */
+  .portfolio-content .video-wrapper:first-of-type {
+    margin-top: 0; }
+  /* line 226, ../partials/_layout.scss */
   .portfolio-content p {
     font-family: "RBNo2.1a-medium";
     font-size: 18px; }
-    /* line 226, ../partials/_layout.scss */
+    /* line 229, ../partials/_layout.scss */
     .portfolio-content p:last-of-type {
       margin-bottom: 18px; }
 

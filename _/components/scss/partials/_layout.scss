@@ -219,6 +219,9 @@ section, .flex {
 }
 
 .portfolio-content {
+	.video-wrapper:first-of-type {
+		margin-top: 0;
+	}
 	padding-top: 50px;
 	p {
 		font-family: "RBNo2.1a-medium";
