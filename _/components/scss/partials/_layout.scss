@@ -180,14 +180,18 @@ section, .flex {
 		z-index: 10;
 		margin: 0;
 		padding: 0;
+		padding-bottom: 22px;
 		p {
 			margin: 0;
 			padding: 0;
 		}
+		.container {
+			display: flex;
+			align-items: flex-end;
+		}
 		.fixed-header-left {
 			@include span(10);
 			@include first;
-			min-height: 52px;
 			p {
 				font-family: "RBNo2.1a-medium";
 				font-size: 19px;
@@ -209,7 +213,6 @@ section, .flex {
 			width: 100%;
 			background-color: $red;
 			margin-top: 10px;
-			margin-bottom: 20px;
 		}
 	}
 }
@@ -221,9 +224,6 @@ section, .flex {
 		font-size: 18px;
 		&:last-of-type {
 			margin-bottom: 18px;
-		}
-		img {
-
 		}
 	}
 }
