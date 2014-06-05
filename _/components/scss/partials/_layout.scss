@@ -102,21 +102,23 @@ section, .flex {
 		backface-visibility: hidden;
 	}
 	h2 {
-		padding-top: 50px;
-		line-height: 40px;
+		line-height: 48px;
 		font-family: 'Rene_Bieder-RBNo3.1-BlackDEMO';
 		font-size: 48px;
 	}
 	p {
 		font-family: 'RBNo2.1a-book';
-		font-size: 26px;
+		font-size: 30px;
+		line-height: 30px;
 	}
 	h2,p, {
 		color: $background;
 		display: block;
 		margin: 0 auto;
 		text-transform: uppercase;
+
 	}
+
 	.caption, img {
 		background-color: $red;
 		text-align: center;
@@ -129,6 +131,14 @@ section, .flex {
 		width: 100%;
 		transform: rotateY(-180deg);
 		color: white;
+		div {
+			position: relative;
+		  	top: 50%;
+		  	transform: translateY(-50%);
+		  	p:last-of-type {
+		  		padding: 0;
+		  	}
+		}
 	}
 	&:hover {
 		img {

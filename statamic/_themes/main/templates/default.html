@@ -9,8 +9,12 @@
 	
 	<div class="portfolio-item">
 		<a class="portfolio-image" href="{{ url }}">
-			<div class="caption"><h2 class="title">{{ title }}</h2>
-			<p class="subHeader">{{ subHeader }}</p></div>
+			<div class="caption">
+			<div>
+			<h2 class="title">{{ title }}</h2>
+			<p class="subHeader">{{ subHeader }}</p>
+			</div>
+			</div>
 			{{ if mainImage|not_empty }}
 				<img src="{{ transform
 				src="{{ mainImage }}"
