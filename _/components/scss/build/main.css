@@ -951,7 +951,7 @@ section, .flex {
     @media (min-width: 1200px) {
       /* line 170, ../partials/_layout.scss */
       .portfolio-page .container {
-        max-width: 1000px; } }
+        max-width: 1500px; } }
   /* line 182, ../partials/_layout.scss */
   .portfolio-page .fixed-header-text {
     position: fixed;
@@ -976,7 +976,7 @@ section, .flex {
     @media (min-width: 1200px) {
       /* line 182, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text {
-        max-width: 1000px; } }
+        max-width: 1500px; } }
     /* line 200, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text p {
       margin: 0;

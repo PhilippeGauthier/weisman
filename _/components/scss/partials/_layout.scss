@@ -176,7 +176,7 @@ section, .flex {
 		max-width: 768px;
 	}
 	@include breakpoint($large) {
-		max-width: 1000px;
+		max-width: 1500px;
 	}
 	}
 	.fixed-header-text {
@@ -189,7 +189,7 @@ section, .flex {
 			max-width: 768px;
 		}
 		@include breakpoint($large) {
-			max-width: 1000px;
+			max-width: 1500px;
 		}
 		background-color: $background;
 		z-index: 10;
