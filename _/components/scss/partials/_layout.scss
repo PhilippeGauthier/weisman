@@ -234,9 +234,6 @@ section, .flex {
 }
 
 .portfolio-content {
-	.video-wrapper:first-of-type {
-		margin-top: 0;
-	}
 	padding-top: 50px;
 	p {
 		font-family: "RBNo2.1a-medium";
@@ -245,4 +242,7 @@ section, .flex {
 			margin-bottom: 18px;
 		}
 	}
+}
+.portfolio-content:first-child {
+	margin-top: 0;
 }

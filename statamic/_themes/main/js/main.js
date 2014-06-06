@@ -197,7 +197,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   var headerHeight = $('.fixed-header-text').height();
-  $('.portfolio-content').css("margin-top",headerHeight+'px');
+  $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
 
 
