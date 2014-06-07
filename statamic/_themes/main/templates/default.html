@@ -12,7 +12,9 @@
 			<div class="caption">
 			<div>
 			<h2 class="title">{{ title }}</h2>
+			{{ if subHeader|not_empty }}
 			<p class="subHeader">{{ subHeader }}</p>
+			{{ endif }}
 			</div>
 			</div>
 			{{ if mainImage|not_empty }}

@@ -48,6 +48,9 @@
 				clear: right;
 			}
 		}
+		h4 {
+			margin-top: 2px;
+		}
 		li:hover .border {
 			width: 100%;
 			background-color: $red;
@@ -117,7 +120,7 @@
 	width: 100%;
 	position: fixed;
 	z-index: 10;
-	
+
 	padding-top: 20px;
 	background-color: $background;
 	h3,h4 {
