@@ -802,25 +802,25 @@ section, .flex {
     /* line 47, ../partials/_layout.scss */
     .container {
       max-width: 1200px; } }
-  /* line 60, ../partials/_layout.scss */
+  /* line 61, ../partials/_layout.scss */
   .container.content {
     justify-content: center; }
-    /* line 62, ../partials/_layout.scss */
+    /* line 63, ../partials/_layout.scss */
     .container.content.left {
       text-align: left; }
-    /* line 65, ../partials/_layout.scss */
+    /* line 66, ../partials/_layout.scss */
     .container.content.center {
       margin-right: auto;
       margin-left: auto;
       text-align: center; }
-      /* line 66, ../partials/_layout.scss */
+      /* line 67, ../partials/_layout.scss */
       .container.content.center h1, .container.content.center h2, .container.content.center h3, .container.content.center h4, .container.content.center h5, .container.content.center h6 {
         text-align: center; }
-    /* line 73, ../partials/_layout.scss */
+    /* line 74, ../partials/_layout.scss */
     .container.content.right {
       text-align: right; }
 
-/* line 80, ../partials/_layout.scss */
+/* line 81, ../partials/_layout.scss */
 .portfolio-item {
   position: relative;
   display: block;
@@ -845,43 +845,43 @@ section, .flex {
     margin-right: -100%;
     clear: none; }
 
-/* line 87, ../partials/_layout.scss */
+/* line 88, ../partials/_layout.scss */
 .portfolio-image {
   width: 395px;
   height: 162px;
   perspective: 1000px;
   position: relative;
   display: block; }
-  /* line 93, ../partials/_layout.scss */
+  /* line 94, ../partials/_layout.scss */
   .portfolio-image img {
     position: absolute;
     left: 0;
     top: 0;
     max-width: 395px;
     max-height: 162px; }
-  /* line 100, ../partials/_layout.scss */
+  /* line 101, ../partials/_layout.scss */
   .portfolio-image img, .portfolio-image h2, .portfolio-image p {
     vertical-align: middle;
     backface-visibility: hidden; }
-  /* line 105, ../partials/_layout.scss */
+  /* line 106, ../partials/_layout.scss */
   .portfolio-image h2, .portfolio-image p {
     color: #d8d8d8;
     display: block;
     margin: 0 auto;
     text-transform: uppercase;
     vertical-align: baseline; }
-  /* line 112, ../partials/_layout.scss */
+  /* line 113, ../partials/_layout.scss */
   .portfolio-image h2 {
     line-height: 48px;
     font-family: 'Rene_Bieder-RBNo3.1-BlackDEMO';
     font-size: 48px;
     margin-top: 6px; }
-  /* line 118, ../partials/_layout.scss */
+  /* line 119, ../partials/_layout.scss */
   .portfolio-image p {
     font-family: 'RBNo2.1a-book';
     font-size: 30px;
     line-height: 30px; }
-  /* line 124, ../partials/_layout.scss */
+  /* line 125, ../partials/_layout.scss */
   .portfolio-image .caption, .portfolio-image img {
     background-color: #ce534d;
     text-align: center;
@@ -891,27 +891,27 @@ section, .flex {
     -webkit-transition: all 1s;
     transition: all 1s;
     backface-visibility: hidden; }
-  /* line 131, ../partials/_layout.scss */
+  /* line 132, ../partials/_layout.scss */
   .portfolio-image .caption {
     height: 100%;
     width: 100%;
     transform: rotateY(-180deg);
     color: white;
     display: table; }
-    /* line 137, ../partials/_layout.scss */
+    /* line 138, ../partials/_layout.scss */
     .portfolio-image .caption div {
       display: table-cell;
       vertical-align: middle;
       position: relative;
       top: 50%;
       transform: translateY(-50%); }
-      /* line 143, ../partials/_layout.scss */
+      /* line 144, ../partials/_layout.scss */
       .portfolio-image .caption div p:last-of-type {
         padding: 0; }
-  /* line 149, ../partials/_layout.scss */
+  /* line 150, ../partials/_layout.scss */
   .portfolio-image:hover img {
     transform: rotateY(180deg); }
-  /* line 152, ../partials/_layout.scss */
+  /* line 153, ../partials/_layout.scss */
   .portfolio-image:hover .caption, .portfolio-image:hover h2, .portfolio-image:hover p, .portfolio-image:hover img {
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -919,18 +919,18 @@ section, .flex {
     transition: all 0.5s;
     transform-style: preserve-3d;
     backface-visibility: hidden; }
-  /* line 158, ../partials/_layout.scss */
+  /* line 159, ../partials/_layout.scss */
   .portfolio-image:hover .caption {
     transform: rotateY(0deg); }
 
-/* line 164, ../partials/_layout.scss */
+/* line 165, ../partials/_layout.scss */
 .portfolio-page {
   position: relative;
   padding-top: 80px; }
-  /* line 167, ../partials/_layout.scss */
+  /* line 168, ../partials/_layout.scss */
   .portfolio-page img {
     max-width: 100%; }
-  /* line 170, ../partials/_layout.scss */
+  /* line 171, ../partials/_layout.scss */
   .portfolio-page .container {
     max-width: 36.875em;
     margin-left: auto;
@@ -941,18 +941,18 @@ section, .flex {
       display: block;
       clear: both; }
     @media (min-width: 420px) {
-      /* line 170, ../partials/_layout.scss */
+      /* line 171, ../partials/_layout.scss */
       .portfolio-page .container {
         max-width: 420px; } }
     @media (min-width: 768px) {
-      /* line 170, ../partials/_layout.scss */
+      /* line 171, ../partials/_layout.scss */
       .portfolio-page .container {
         max-width: 768px; } }
     @media (min-width: 1200px) {
-      /* line 170, ../partials/_layout.scss */
+      /* line 171, ../partials/_layout.scss */
       .portfolio-page .container {
         max-width: 1500px; } }
-  /* line 182, ../partials/_layout.scss */
+  /* line 184, ../partials/_layout.scss */
   .portfolio-page .fixed-header-text {
     position: fixed;
     width: 100%;
@@ -966,63 +966,67 @@ section, .flex {
     min-height: 50px !important;
     padding-bottom: 20px; }
     @media (min-width: 420px) {
-      /* line 182, ../partials/_layout.scss */
+      /* line 184, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text {
         max-width: 420px; } }
     @media (min-width: 768px) {
-      /* line 182, ../partials/_layout.scss */
+      /* line 184, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text {
         max-width: 768px; } }
     @media (min-width: 1200px) {
-      /* line 182, ../partials/_layout.scss */
+      /* line 184, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text {
         max-width: 1500px; } }
-    /* line 200, ../partials/_layout.scss */
+    /* line 203, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text p {
       margin: 0;
       padding: 0; }
-    /* line 204, ../partials/_layout.scss */
+    /* line 207, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .container {
       display: flex;
-      align-items: flex-end; }
-    /* line 208, ../partials/_layout.scss */
+      align-items: flex-end;
+      padding-left: 20px;
+      padding-right: 20px; }
+    /* line 213, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .fixed-header-left {
       flex: 1 1 auto;
       margin-right: 10px; }
-      /* line 211, ../partials/_layout.scss */
+      /* line 216, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text .fixed-header-left p {
         font-family: "RBNo2.1a-medium";
         font-size: 19px;
         line-height: 26px; }
-    /* line 217, ../partials/_layout.scss */
+    /* line 222, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .fixed-header-right {
       text-align: right;
       min-width: 130px; }
-      /* line 220, ../partials/_layout.scss */
+      /* line 225, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text .fixed-header-right p {
         font-size: 22px;
         line-height: 22px;
         font-family: "RBNo2.1a-BookItalic";
         color: #ce534d; }
-    /* line 227, ../partials/_layout.scss */
+    /* line 232, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .divider {
       height: 2px;
       width: 100%;
       background-color: #ce534d;
       margin-top: 10px; }
 
-/* line 236, ../partials/_layout.scss */
+/* line 241, ../partials/_layout.scss */
 .portfolio-content {
-  padding-top: 50px; }
-  /* line 238, ../partials/_layout.scss */
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  /* line 245, ../partials/_layout.scss */
   .portfolio-content p {
     font-family: "RBNo2.1a-medium";
     font-size: 18px; }
-    /* line 241, ../partials/_layout.scss */
+    /* line 248, ../partials/_layout.scss */
     .portfolio-content p:last-of-type {
       margin-bottom: 18px; }
 
-/* line 246, ../partials/_layout.scss */
+/* line 253, ../partials/_layout.scss */
 .portfolio-content:first-child {
   margin-top: 0; }
 
