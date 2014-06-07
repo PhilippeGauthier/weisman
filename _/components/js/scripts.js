@@ -112,7 +112,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  var headerHeight = $('.fixed-header-text').height();
+  var headerHeight = $('.fixed-header-text').height() +20;
   $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
 

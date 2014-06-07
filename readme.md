@@ -10,6 +10,7 @@ Apache setup
 
 Make sure you have the GD library installed for PHP
 
+sudo a2ensite #config.conf
 sudo apt-get install php5-gd
 sudo a2enmod rewrite
 
