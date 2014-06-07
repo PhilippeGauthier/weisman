@@ -821,7 +821,7 @@ section, .flex {
   @media (min-width: 1200px) {
     /* line 47, ../partials/_layout.scss */
     .container {
-      max-width: 1200px; } }
+      max-width: 1000px; } }
   /* line 61, ../partials/_layout.scss */
   .container.content {
     -webkit-box-pack: center;
@@ -992,7 +992,7 @@ section, .flex {
     @media (min-width: 1200px) {
       /* line 173, ../partials/_layout.scss */
       .portfolio-page .container {
-        max-width: 1200px; } }
+        max-width: 1000px; } }
   /* line 186, ../partials/_layout.scss */
   .portfolio-page .fixed-header-text {
     position: fixed;
@@ -1017,7 +1017,7 @@ section, .flex {
     @media (min-width: 1200px) {
       /* line 186, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text {
-        max-width: 1200px; } }
+        max-width: 1000px; } }
     /* line 205, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text p {
       margin: 0;
