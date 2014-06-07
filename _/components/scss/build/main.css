@@ -882,7 +882,7 @@ section, .flex {
     font-size: 30px;
     line-height: 30px;
     letter-spacing: 1px;
-    margin-top: 8px; }
+    margin-top: 6px; }
   /* line 127, ../partials/_layout.scss */
   .portfolio-image .caption, .portfolio-image img {
     background-color: #ce534d;
