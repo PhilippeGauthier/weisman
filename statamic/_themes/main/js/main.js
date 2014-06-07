@@ -196,7 +196,8 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  var headerHeight = $('.fixed-header-text').height() +20;
+  var headerHeight = $('.fixed-header-text').outerHeight();
+  $('.test').text('the size of the fixed header is ' + headerHeight + 'px');
   $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
 
