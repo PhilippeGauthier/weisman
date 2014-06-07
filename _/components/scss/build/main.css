@@ -801,7 +801,7 @@ section, .flex {
   @media (min-width: 1200px) {
     /* line 47, ../partials/_layout.scss */
     .container {
-      max-width: 1000px; } }
+      max-width: 1200px; } }
   /* line 61, ../partials/_layout.scss */
   .container.content {
     justify-content: center; }
