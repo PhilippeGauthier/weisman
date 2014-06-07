@@ -247,9 +247,17 @@ section, .flex {
 	p {
 		font-family: "RBNo2.1a-medium";
 		font-size: 18px;
+		margin-top: 0;
+		margin-bottom: 8px;
+		&:first-of-type {
+			margin-top: 10px;
+		}
 		&:last-of-type {
 			margin-bottom: 18px;
 		}
+	}
+	.video-wrapper img {
+		margin-bottom: 14px;
 	}
 }
 .portfolio-content:first-child {

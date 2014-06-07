@@ -1071,12 +1071,20 @@ section, .flex {
   /* line 247, ../partials/_layout.scss */
   .portfolio-content p {
     font-family: "RBNo2.1a-medium";
-    font-size: 18px; }
-    /* line 250, ../partials/_layout.scss */
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 8px; }
+    /* line 252, ../partials/_layout.scss */
+    .portfolio-content p:first-of-type {
+      margin-top: 10px; }
+    /* line 255, ../partials/_layout.scss */
     .portfolio-content p:last-of-type {
       margin-bottom: 18px; }
+  /* line 259, ../partials/_layout.scss */
+  .portfolio-content .video-wrapper img {
+    margin-bottom: 14px; }
 
-/* line 255, ../partials/_layout.scss */
+/* line 263, ../partials/_layout.scss */
 .portfolio-content:first-child {
   margin-top: 0; }
 
