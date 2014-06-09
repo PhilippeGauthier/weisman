@@ -103,7 +103,10 @@
 })( window.jQuery || window.Zepto );
 
 
-$(".portfolio-content p").addClass('video-wrapper');
+$('.portfolio-content p img').each(function() {
+    var width = $(this).width();
+    $(this).parent().prev().css("max-width",width+'px');
+});
 
 
 $(document).ready(function(){
@@ -113,7 +116,6 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   var headerHeight = $('.fixed-header-text').outerHeight();
-  $('.test').text('the size of the fixed header is ' + headerHeight + 'px');
   $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
 

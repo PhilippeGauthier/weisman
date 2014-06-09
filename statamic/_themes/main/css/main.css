@@ -1031,9 +1031,7 @@ section, .flex {
       -webkit-box-align: end;
       -webkit-align-items: flex-end;
       -ms-flex-align: end;
-      align-items: flex-end;
-      padding-left: 20px;
-      padding-right: 20px; }
+      align-items: flex-end; }
     /* line 215, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .fixed-header-left {
       -webkit-box-flex: 1;
@@ -1065,9 +1063,7 @@ section, .flex {
 
 /* line 243, ../partials/_layout.scss */
 .portfolio-content {
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px; }
+  padding-top: 50px; }
   /* line 247, ../partials/_layout.scss */
   .portfolio-content p {
     font-family: "RBNo2.1a-medium";
@@ -1081,10 +1077,13 @@ section, .flex {
     .portfolio-content p:last-of-type {
       margin-bottom: 18px; }
   /* line 259, ../partials/_layout.scss */
-  .portfolio-content .video-wrapper img {
+  .portfolio-content p > img {
     margin-bottom: 14px; }
+  /* line 262, ../partials/_layout.scss */
+  .portfolio-content .video-wrapper {
+    margin-bottom: 24px; }
 
-/* line 263, ../partials/_layout.scss */
+/* line 266, ../partials/_layout.scss */
 .portfolio-content:first-child {
   margin-top: 0; }
 

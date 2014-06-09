@@ -15,7 +15,7 @@
 				</div>
 				<div class="fixed-header-right">
 					{{ categories }}
-					 <p> {{ value|title }}</p>
+					<p> {{ value|title }}</p>
 					{{ /categories }}
 				</div>
 			</div>
@@ -25,13 +25,16 @@
 
 	<div class="container">
 		<div class="portfolio-content">
-		{{ if videoEmbed|not_empty }}
-		<div class="video-wrapper">
-			{{ videoEmbed }}
-		</div>
-		{{ endif }}
-		{{ content }}
+		{{ videos }}
+			{{ if videoEmbed|not_empty }}
+			<div class="video-wrapper">
+				{{ videoEmbed }}
+			</div>
+			{{ endif }}
+		{{ /videos }}
+			{{ content }}
 		</div>
 	</div>
 
 </section>
+<div class="test"></div>

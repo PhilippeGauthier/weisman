@@ -23,8 +23,15 @@ fields:
       folder: portfolio #make sure you rename this to the folder name of your blog
       type: categories
 
-  videoEmbed:
-    type: text
+  videos:
+    display: Videos
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      videoEmbed:
+        type: text
+        display: Embed Code
 
   content:
     display: Blog Entry

@@ -209,8 +209,8 @@ section, .flex {
 		.container {
 			display: flex;
 			align-items: flex-end;
-		padding-left: 20px;
-		padding-right: 20px;
+		// padding-left: 20px;
+		// padding-right: 20px;
 		}
 		.fixed-header-left {
 			flex: 1 1 auto;
@@ -242,8 +242,8 @@ section, .flex {
 
 .portfolio-content {
 	padding-top: 50px;
-	padding-left: 20px;
-	padding-right: 20px;
+	// padding-left: 20px;
+	// padding-right: 20px;
 	p {
 		font-family: "RBNo2.1a-medium";
 		font-size: 18px;
@@ -256,8 +256,11 @@ section, .flex {
 			margin-bottom: 18px;
 		}
 	}
-	.video-wrapper img {
+	p > img {
 		margin-bottom: 14px;
+	}
+	.video-wrapper {
+		margin-bottom: 24px;
 	}
 }
 .portfolio-content:first-child {
