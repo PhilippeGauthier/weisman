@@ -102,12 +102,12 @@
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
 
-$(document).ready(function(){
+
 $('.portfolio-content p img').each(function() {
     var width = $(this).width();
     $(this).parent().prev().css("max-width",width+'px');
 });
-});
+
 
 
 $(document).ready(function(){
