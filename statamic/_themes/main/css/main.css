@@ -1087,6 +1087,30 @@ section, .flex {
 .portfolio-content:first-child {
   margin-top: 0; }
 
+/* line 270, ../partials/_layout.scss */
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -30px; }
+
+/* line 275, ../partials/_layout.scss */
+.page-wrap:after {
+  content: "";
+  display: block; }
+
+/* line 279, ../partials/_layout.scss */
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 30px; }
+
+/* line 283, ../partials/_layout.scss */
+.site-footer {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: #7e7868; }
+
 /* line 3, ../partials/_modules.scss */
 .cbp-spmenu {
   float: left; }
