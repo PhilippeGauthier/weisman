@@ -122,4 +122,8 @@ $('.portfolio-content p img').each(function() {
 });
 });
 
+$(function() {
+    $('.resume-image').magnificPopup({ type: 'image' });
+});
+
 

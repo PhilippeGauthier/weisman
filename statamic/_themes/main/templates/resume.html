@@ -1,18 +1,27 @@
-<nav id="landing-nav">
-	<div class="container">
-		{{ theme:partial src="nav-landing" }}
-	</div>
-</nav>
+{{ theme:partial src="nav-resume" }}
 
-<div class="container">
-<div class="resume">
+<div class="container resume-container">
+
+<h2>DOWNLOAD RESUMES</h2>
+<div class="resume-headers">
+		<h3 class="resume-download"><a target="_blank" href="{{ resumePdfFun }}" >fun<span>///</span>non-traditional</a></h3>
+		<div class="divider"></div>
+</div>
+<div class="resume-headers">
+		<h3 class="resume-download"><a target="_blank" href="{{ resumePdfBoring }}" >boring<span>///</span>traditional</a></h3>
+		<div class="divider"></div>
+</div>
 
 {{ resumes }}
-    <a href="{{ resumePdf }}" target="_blank"><img src="{{ resumeImage }}" alt=""></a>
+<div class="resume">
+
+	
+    <a class="resume-image" href="{{ resumeImageFullsize }}"><img src="{{ resumeImageThumbnail }}" alt=""></a>
+ </div>
 {{ /resumes }}
 
 
 
 
-</div>
+
 </div>

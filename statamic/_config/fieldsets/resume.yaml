@@ -12,26 +12,34 @@ fields:
     image_dir: assets/img/
     file_dir: assets/img/
 
+  resumePdfFun:
+    type: file
+    display: Fun Resume PDF
+    destination: assets/img
+    show_thumbnail: true
+
+  resumePdfBoring:
+    type: file
+    display: Boring Resume PDF
+    destination: assets/img
+    show_thumbnail: true
+
   resumes:
     display: Resumes
     type: grid
     starting_rows: 1
     min_rows: 1
     fields:
-      resumeImage:
+      resumeImageThumbnail:
+        type: file
+        display: Resume Thumbnail
+        destination: assets/img
+        show_thumbnail: true
+      resumeImageFullsize:
         type: file
         display: Resume Image
         destination: assets/img
         show_thumbnail: true
-      resumePdf:
-        type: file
-        display: Resume PDF
-        destination: assets/img
-        show_thumbnail: true
-      caption:
-        display: Caption
-        type: text
-        width: 50%
 
 
 
