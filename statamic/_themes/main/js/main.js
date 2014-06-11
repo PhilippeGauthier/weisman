@@ -2249,10 +2249,10 @@ $(document).ready(function(){
 });
 
 
-$('.portfolio-content p img').each(function() {
-    var width = $(this).width();
-    $(this).parent().css("max-width",width+'px');
-});
+// $('.portfolio-content p img').each(function() {
+//     var width = $(this).width();
+//     $(this).parent().css("max-width",width+'px');
+// });
 
 
 $(function() {
