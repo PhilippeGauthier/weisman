@@ -7,9 +7,9 @@
 		<div class="fixed-header-text">
 			<div class="container">
 				<div class="fixed-header-left">
-					 
+					{{ if fixedHeaderText|not_empty }} 
 						{{ fixedHeaderText }}
-					
+					{{ endif }}
 					<div class="divider"></div>
 				</div>
 				<div class="fixed-header-right">
