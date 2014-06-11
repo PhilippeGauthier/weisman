@@ -142,7 +142,7 @@ section, .flex {
 			vertical-align: middle;
 			position: relative;
 		  	top: 50%;
-		  	transform: translateY(-50%);
+		  	-webkit-transform: translateY(-50%);
 		  	p:last-of-type {
 		  		padding: 0;
 		  	}
