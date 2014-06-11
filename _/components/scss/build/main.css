@@ -1165,6 +1165,10 @@ section, .flex {
 .resume-image {
   cursor: zoom-in; }
 
+/* line 432, ../partials/_layout.scss */
+.image-content {
+  max-width: 1000px; }
+
 /* line 3, ../partials/_modules.scss */
 .cbp-spmenu {
   float: left; }
