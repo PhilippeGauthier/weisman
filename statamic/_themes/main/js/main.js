@@ -2250,7 +2250,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 $('.image-content img').each(function() {
-    var width = $(this).width();
+    var width = $(this).outerWidth();
     $(this).parent().css("max-width",width+'px');
 });
 });
