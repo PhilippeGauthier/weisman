@@ -115,12 +115,12 @@ $(document).ready(function(){
   $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
 
-$(document).ready(function(){
-$('.image-content img').each(function() {
+
+$('.image-content img').load(function() {
     var width = $(this).outerWidth();
     $(this).parent().css("max-width",width+'px');
 });
-});
+
 
 
 $(function() {
