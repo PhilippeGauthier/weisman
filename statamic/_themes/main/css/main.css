@@ -960,9 +960,9 @@ section, .flex {
     /* line 208, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text h1 {
       font-family: 'RBNo2.1a-Bold';
-      font-size: 19pt;
+      font-size: 18pt;
       line-height: 28pt;
-      margin-bottom: 3px; }
+      margin-bottom: 1px; }
     /* line 214, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text h2 {
       font-family: 'RBNo2.1a-Medium';
