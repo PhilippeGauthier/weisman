@@ -464,7 +464,6 @@ img.mfp-img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 40px 0 40px;
   margin: 0 auto; }
 
 /* The shadow behind the image */
@@ -477,8 +476,6 @@ img.mfp-img {
   content: '';
   position: absolute;
   left: 0;
-  top: 40px;
-  bottom: 40px;
   display: block;
   right: 0;
   width: auto;
