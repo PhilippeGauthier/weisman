@@ -286,7 +286,6 @@ button.mfp-close, button.mfp-arrow {
   border: 0;
   -webkit-appearance: none;
   display: block;
-  display: none;
   outline: none;
   padding: 0;
   z-index: 1046;
