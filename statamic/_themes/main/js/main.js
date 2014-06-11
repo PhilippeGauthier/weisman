@@ -2243,7 +2243,7 @@ $(document).ready(function(){
   $(".video-wrapper").fitVids();
 });
 
-$('.fixed-header-text').load(function(){
+$(window).load(function(){
   var headerHeight = $(this).outerHeight();
   console.log("the height is" + headerHeight);
   $('.portfolio-content').css("padding-top",headerHeight+'px');
