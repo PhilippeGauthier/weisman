@@ -13,9 +13,11 @@
 					<div class="divider"></div>
 				</div>
 				<div class="fixed-header-right">
+				{{ if categories|not_empty }} 
 					{{ categories }}
 					<p> {{ value|title }}</p>
 					{{ /categories }}
+				{{ endif }}
 				</div>
 			</div>
 
@@ -24,14 +26,13 @@
 
 	<div class="container">
 		<div class="portfolio-content">
-		{{ videos }}
-			
+		{{ if videos|not_empty }}
 			<div class="video-wrapper">
 			{{ video }}
 			</div>
-			
-		{{ /videos }}
-			{{ content }}
+		{{ endif }}
+		
+		{{ content }}
 		</div>
 	</div>
 
