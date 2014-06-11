@@ -112,6 +112,7 @@ $(document).ready(function(){
 
 $('.fixed-header-text').load(function(){
   var headerHeight = $(this).outerHeight();
+  console.log("the height is" + headerHeight);
   $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
 
