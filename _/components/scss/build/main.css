@@ -1095,7 +1095,7 @@ section, .flex {
   /* line 353, ../partials/_layout.scss */
   .resume-container h2 {
     font-size: 34pt;
-    margin-top: 221px;
+    padding-top: 221px;
     letter-spacing: 1px; }
 
 /* line 360, ../partials/_layout.scss */
