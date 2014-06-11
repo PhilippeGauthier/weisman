@@ -29,7 +29,7 @@ fields:
     starting_rows: 1
     min_rows: 1
     fields:
-      videoEmbed:
+      video:
         type: text
         display: Embed Code
 

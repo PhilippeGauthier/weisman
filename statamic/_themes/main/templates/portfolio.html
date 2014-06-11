@@ -7,10 +7,9 @@
 		<div class="fixed-header-text">
 			<div class="container">
 				<div class="fixed-header-left">
-					{{ if fixedHeaderText|not_empty }} 
-					{{ fixedHeaderText }}
+					 
+						{{ fixedHeaderText }}
 					
-					{{ endif }}
 					<div class="divider"></div>
 				</div>
 				<div class="fixed-header-right">
@@ -28,7 +27,7 @@
 		{{ videos }}
 			{{ if videoEmbed|not_empty }}
 			<div class="video-wrapper">
-				{{ videoEmbed }}
+			{{ video }}
 			</div>
 			{{ endif }}
 		{{ /videos }}
