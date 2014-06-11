@@ -27,9 +27,11 @@
 	<div class="container">
 		<div class="portfolio-content">
 		{{ videos }}
+			{{ if video|not_empty }}
 			<div class="video-wrapper">
 			{{ video }}
 			</div>
+			{{ endif }}
 		{{ /videos }}
 		
 		{{ content }}
