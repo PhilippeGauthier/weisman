@@ -116,10 +116,9 @@ $(document).ready(function(){
 });
 
 
-$('.image-content img').load(function() {
-   alert("Image loaded.");
-    // var width = $(this).outerWidth();
-    // $(this).parent().css("max-width",width+'px');
+$('.image-content img').each(function() {
+    var width = $(this).outerWidth();
+    $(this).load(.parent().css("max-width",width+'px'));
 });
 
 
