@@ -359,27 +359,35 @@ section, .flex {
 
 .resume-headers {
 	margin-top: 60px;
-	@include pre(1);
-	@include span(4);
-	&:last-of-type {
-		@include pre(2);
-		@include span(4);
+	&.left {
+		@include pre(1);
+		@include span(4);	
+		.divider {
+			width: 232px;
+		}
 	}
+	&.right {
+		@include pre(2);
+		@include span(4);	
+		.divider {
+			width: 216px;
+		}
+	}
+
 	.divider {
 		margin: 0 auto;
 		text-align: center;
 		background-color: $green;
 		height: 7px;
-		width: 100%;
 		margin-top: 3px;
 		margin-bottom: 23px;
 	}
-	.divider:first-of-type {
-		width: 232px;
-	}
-	.divider:last-of-type {
-		width: 216px;
-	}
+	// .divider:first-of-type {
+	// 	width: 232px;
+	// }
+	// .divider:last-of-type {
+	// 	width: 216px;
+	// }
 	h3 a{
 		font-size: 32pt;
 		font-family: "RBNo2Light";
