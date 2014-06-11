@@ -48,3 +48,10 @@
 	</div>
 
 </section>
+
+<script>
+$('.image-content img').each(function() {
+    var width = $(this).width();
+    $(this).parent().css("max-width",width+'px');
+});
+</script>
