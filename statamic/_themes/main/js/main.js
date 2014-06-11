@@ -2243,7 +2243,7 @@ $(document).ready(function(){
   $(".video-wrapper").fitVids();
 });
 
-$(".image-content img").load(function(){
+$('.fixed-header-text').load(function(){
   var headerHeight = $('.fixed-header-text').outerHeight();
   $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
