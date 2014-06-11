@@ -233,9 +233,9 @@ section, .flex {
 		a {
 			font-family: 'RBNo2.1a-BookItalic';
 			border-bottom: 2px solid $green;
-			// padding-bottom: 3px;
-			font-size: 16pt;
-			line-height: 17pt;
+			color: $green;
+			font-size: 16pt !important;
+			line-height: 17pt !important;
 			margin-bottom: 6px;
 		}
 		.container {
