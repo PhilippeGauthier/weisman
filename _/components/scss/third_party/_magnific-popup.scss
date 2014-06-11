@@ -57,7 +57,7 @@
 .mfp-ajax-cur {
   cursor: progress; }
 
-.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder {
   cursor: -moz-zoom-out;
   cursor: -webkit-zoom-out;
   cursor: zoom-out; }
@@ -126,6 +126,7 @@
   background-image: url('../img/CLOSE_BUTTON.png');
   &:hover, &:focus {
     background-image: url('../img/CLOSE_BUTTON_HOVER.png');
+    cursor: pointer;
   }
   line-height: 44px;
   position: absolute;
