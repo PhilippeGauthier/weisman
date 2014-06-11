@@ -117,11 +117,11 @@ $(document).ready(function(){
 
 
 $('.image-content img').each(function() {
-    var width = $(this).outerWidth();
-    $(this).load(.parent().css("max-width",width+'px'));
+    $(this).load(console.log( "image loaded" );)
+    
 });
-
-
+// var width = $(this).outerWidth();
+// $(this).load(.parent().css("max-width",width+'px'));
 
 $(function() {
     $('.resume-image').magnificPopup({ type: 'image' });
