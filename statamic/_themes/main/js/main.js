@@ -2244,7 +2244,7 @@ $(document).ready(function(){
 });
 
 $('.fixed-header-text').load(function(){
-  var headerHeight = $('.fixed-header-text').outerHeight();
+  var headerHeight = $(this).outerHeight();
   $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
 
