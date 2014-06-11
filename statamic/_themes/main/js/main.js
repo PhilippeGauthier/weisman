@@ -2248,13 +2248,16 @@ $(document).ready(function(){
   $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
 
-$(window).load(function(){
-$('.image-content img').each(function() {
+$(".image-content img").load(function(){
     var width = $(this).width();
     $(this).parent().css("max-width",width+'px');
 });
-});
 
+// $(".image-content img").one('load', function() {
+//   // do stuff
+// }).each(function() {
+//   if(this.complete) $(this).load();
+// });
 
 $(function() {
     $('.resume-image').magnificPopup({ type: 'image' });
