@@ -110,7 +110,7 @@ $(document).ready(function(){
   $(".video-wrapper").fitVids();
 });
 
-$(window).load(function(){
+$(".image-content img").load(function(){
   var headerHeight = $('.fixed-header-text').outerHeight();
   $('.portfolio-content').css("padding-top",headerHeight+'px');
 });
