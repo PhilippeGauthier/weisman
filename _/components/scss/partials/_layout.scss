@@ -136,13 +136,15 @@ section, .flex {
 		width: 100%;
 		transform: rotateY(-180deg);
 		color: white;
-		display: table;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
 		div {
-			display: table-cell;
-			vertical-align: middle;
-			position: relative;
-		  	top: 50%;
-		  	-webkit-transform: translateY(-50%);
+			// display: table-cell;
+			// vertical-align: middle;
+			// position: relative;
+		 //  	top: 50%;
+		 //  	-webkit-transform: translateY(-50%);
 		  	p:last-of-type {
 		  		padding: 0;
 		  	}
