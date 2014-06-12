@@ -1275,7 +1275,6 @@ section, .flex {
       margin-top: 8px; }
   /* line 27, ../partials/_nav.scss */
   .landing-nav .details {
-    width: 221px;
     float: left;
     clear: left;
     margin-left: -26px;
@@ -1301,7 +1300,6 @@ section, .flex {
       background-color: #ce534d; }
   /* line 59, ../partials/_nav.scss */
   .landing-nav .contact {
-    width: 283px;
     display: inline-block; }
     /* line 62, ../partials/_nav.scss */
     .landing-nav .contact li:hover .border {
