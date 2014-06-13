@@ -419,6 +419,8 @@ section, .flex {
 	}
 }
 .resume {
+
+	position: relative;
 	@include pre(1);
 	@include span(4);
 	&:last-of-type {
@@ -428,7 +430,6 @@ section, .flex {
 	img {
 		max-width: 100%;
 	}
-
 	text-align: center;
 	.divider {
 		background-color: $green;
@@ -439,6 +440,20 @@ section, .flex {
 }
 
 .resume-image {
+	div {
+	  	top: 50%;
+	  	-webkit-transform: translateY(-50%);
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-family: 'RBNo2.1a-book';
+		color: white;
+		font-size: 28pt;
+		letter-spacing: 1px;
+	}
+	display: inline-block;
 	cursor: zoom-in;
 }
 

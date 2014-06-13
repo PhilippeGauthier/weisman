@@ -1115,32 +1115,47 @@ section, .flex {
 
 /* line 421, ../partials/_layout.scss */
 .resume {
+  position: relative;
   margin-left: 8.47458%;
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
   text-align: center; }
-  /* line 424, ../partials/_layout.scss */
+  /* line 426, ../partials/_layout.scss */
   .resume:last-of-type {
     margin-left: 16.94915%;
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%; }
-  /* line 428, ../partials/_layout.scss */
+  /* line 430, ../partials/_layout.scss */
   .resume img {
     max-width: 100%; }
-  /* line 433, ../partials/_layout.scss */
+  /* line 434, ../partials/_layout.scss */
   .resume .divider {
     background-color: #64b6b1;
     height: 7px;
     width: 100%;
     margin-bottom: 23px; }
 
-/* line 441, ../partials/_layout.scss */
+/* line 442, ../partials/_layout.scss */
 .resume-image {
+  display: inline-block;
   cursor: zoom-in; }
+  /* line 443, ../partials/_layout.scss */
+  .resume-image div {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'RBNo2.1a-book';
+    color: white;
+    font-size: 28pt;
+    letter-spacing: 1px; }
 
-/* line 445, ../partials/_layout.scss */
+/* line 460, ../partials/_layout.scss */
 .image-content {
   max-width: 1000px; }
 
