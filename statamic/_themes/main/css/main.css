@@ -1211,8 +1211,8 @@ section, .flex {
     text-align: center;
     font-family: 'RBNo2.1a-book';
     color: white;
-    font-size: 26pt;
-    letter-spacing: 1px; }
+    font-size: 21pt;
+    letter-spacing: 2px; }
 
 /* line 460, ../partials/_layout.scss */
 .image-content {
