@@ -59,6 +59,8 @@
 	.contact {
 		// width: 283px;
 		display: inline-block;
+		margin-left: 6px;
+		margin-top: 14px !important;
 		li:hover .border {
 			width: 100%;
 			background-color: $red;
@@ -100,6 +102,7 @@
 		padding-bottom: 0;
 		border-bottom: 7px solid $green;
 		text-align: left;
+		font-size: 22px;
 	}
 	h4 {
 		margin-top: 4px;
