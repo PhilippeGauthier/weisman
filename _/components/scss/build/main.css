@@ -1295,7 +1295,7 @@ section, .flex {
     font-size: 22px; }
   /* line 110, ../partials/_nav.scss */
   .landing-nav h4 {
-    margin-top: 4px;
+    margin-top: 2px;
     line-height: 1.05em; }
   /* line 115, ../partials/_nav.scss */
   .landing-nav li:last-of-type h3 {
