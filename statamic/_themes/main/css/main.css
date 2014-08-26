@@ -1289,7 +1289,7 @@ section, .flex {
   .landing-nav .details {
     float: left;
     clear: left;
-    margin-left: -4px;
+    margin-left: -8px;
     margin-right: 5px;
     text-align: left;
     display: inline-block; }
@@ -1316,7 +1316,7 @@ section, .flex {
   /* line 62, ../partials/_nav.scss */
   .landing-nav .contact {
     display: inline-block;
-    margin-left: 12px;
+    margin-left: 8px;
     margin-top: 16px !important; }
     /* line 67, ../partials/_nav.scss */
     .landing-nav .contact li:hover .border {
