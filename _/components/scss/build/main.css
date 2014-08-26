@@ -855,7 +855,7 @@ section, .flex {
 /* line 169, ../partials/_layout.scss */
 .portfolio-page {
   position: relative;
-  padding-top: 80px; }
+  padding-top: 20px; }
   /* line 172, ../partials/_layout.scss */
   .portfolio-page img {
     max-width: 100%; }
