@@ -2260,10 +2260,12 @@ $(document).ready(function(){
   $(".video-wrapper").fitVids();
 });
 
-$(window).load(function(){
-  var headerHeight = $('.fixed-header-text').outerHeight();
-  $('.portfolio-content').css("padding-top",headerHeight+'px');
-});
+if ($(window).width() > 768) {
+  $(window).load(function(){
+    var headerHeight = $('.fixed-header-text').outerHeight();
+    $('.portfolio-content').css("padding-top",headerHeight+'px');
+  });
+}
 
 $(".image-content img").load(function(){
     var width = $(this).width();

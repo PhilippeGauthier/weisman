@@ -129,6 +129,7 @@
 	}
 	h4 {
 		margin-top: 2px;
+		font-size: 1em;
 		line-height: 1.05em;
 	}
 	li  {
@@ -144,7 +145,10 @@
 
 .content-nav-main {
 	width: 100%;
-	position: fixed;
+	// position: fixed;
+	@include breakpoint($medium) {
+		position: fixed;
+	}
 	z-index: 10;
 	top: 0;
 	padding-top: 20px;
@@ -204,8 +208,12 @@
 				background-color: rgba($red,.6);
 			}
 		}
+		&.left {
+			margin-left: 10px;
+		}
 		&.right {
 			float: right;
+			padding-right: 20px;
 			.border {
 				width: 30px;
 			}

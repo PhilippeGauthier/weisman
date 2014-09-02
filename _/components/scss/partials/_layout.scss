@@ -192,7 +192,7 @@ section, .flex {
 	}
 	}
 	.fixed-header-text {
-		position: fixed;
+		
 
 		@include span (12);
 		@include breakpoint($small) {
@@ -200,6 +200,7 @@ section, .flex {
 		}
 		@include breakpoint($medium) {
 			max-width: 768px;
+			position: fixed;
 		}
 		@include breakpoint($large) {
 			max-width: 1000px;
@@ -288,7 +289,10 @@ section, .flex {
 }
 
 .portfolio-content {
-	padding-top: 50px;
+	// padding-top: 20px !important;
+	// @include breakpoint($medium) {
+	// 	padding-top: 10px;
+	// }
 	// padding-left: 20px;
 	// padding-right: 20px;
 	h1,h2,h3,h4 {
