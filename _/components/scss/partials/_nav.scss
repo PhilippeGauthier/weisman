@@ -9,12 +9,16 @@
 	position: relative;
 	img {
 		max-width: 100%;
+		padding: 0 10px;
+		text-align: center;
 	}
 	&.left {
 		@include span(12);
+		padding-left: 0;
 		text-align: center;
 		@include breakpoint($large) {
 			@include span (first 6);
+
 			text-align: right;
 		}
 		
@@ -30,6 +34,7 @@
 		text-align: center;
 		@include breakpoint($large) {
 			@include span(last 6);
+
 		}
 		
 		// ul {
@@ -129,7 +134,7 @@
 	}
 	h4 {
 		margin-top: 2px;
-		font-size: 1em;
+		// font-size: 1em;
 		line-height: 1.05em;
 	}
 	li  {
