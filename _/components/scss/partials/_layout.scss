@@ -272,6 +272,10 @@ section, .flex {
 		.fixed-header-right {
 			text-align: right;
 			min-width: 130px;
+			display: none;
+			@include breakpoint($medium) {
+				display: inline-block;
+			}
 			p {
 				font-size: 22px;
 				line-height: 22px;
