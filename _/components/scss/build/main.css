@@ -921,6 +921,7 @@ section, .flex {
         max-width: 1000px; } }
   /* line 194, ../partials/_layout.scss */
   .portfolio-page .fixed-header-text {
+    padding: 0;
     padding-top: 10px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -932,7 +933,6 @@ section, .flex {
     background-color: #d8d8d8;
     z-index: 10;
     margin: 0;
-    padding: 0;
     min-height: 50px !important;
     padding-bottom: 20px; }
     @media (min-width: 420px) {
@@ -943,47 +943,48 @@ section, .flex {
       /* line 194, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text {
         max-width: 768px;
+        padding-top: 0;
         position: fixed; } }
     @media (min-width: 1200px) {
       /* line 194, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text {
         max-width: 1000px; } }
-    /* line 214, ../partials/_layout.scss */
+    /* line 215, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text h1, .portfolio-page .fixed-header-text h2, .portfolio-page .fixed-header-text h3 {
       letter-spacing: 1.1px; }
-    /* line 217, ../partials/_layout.scss */
+    /* line 218, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text h1 {
       font-family: 'RBNo2.1a-Bold';
       font-size: 18pt;
       line-height: 28pt;
       margin-bottom: 1px; }
-    /* line 223, ../partials/_layout.scss */
+    /* line 224, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text h2 {
       font-family: 'RBNo2.1a-Medium';
       font-size: 16pt;
       line-height: 17pt;
       margin-bottom: 6px; }
-    /* line 229, ../partials/_layout.scss */
+    /* line 230, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text h3 {
       font-family: 'RBNo2.1a-BookItalic';
       font-size: 16pt;
       line-height: 18pt;
       margin-bottom: 0; }
-      /* line 234, ../partials/_layout.scss */
+      /* line 235, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text h3:last-of-type {
         margin-bottom: 8px; }
-    /* line 238, ../partials/_layout.scss */
+    /* line 239, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text h4 {
       font-family: 'RBNo2.1b-Book';
       font-size: 16pt;
       line-height: 17pt;
       margin-bottom: 6px;
       letter-spacing: 1px; }
-    /* line 245, ../partials/_layout.scss */
+    /* line 246, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text p {
       margin: 0;
       padding: 0; }
-    /* line 249, ../partials/_layout.scss */
+    /* line 250, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text a {
       font-family: 'RBNo2.1a-BookItalic';
       border-bottom: 2px solid #64b6b1;
@@ -991,97 +992,97 @@ section, .flex {
       font-size: 16pt !important;
       line-height: 17pt !important;
       margin-bottom: 6px; }
-    /* line 257, ../partials/_layout.scss */
+    /* line 258, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .container {
       display: flex;
       align-items: flex-end; }
-    /* line 263, ../partials/_layout.scss */
+    /* line 264, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .fixed-header-left {
       flex: 1 1 auto;
       margin-right: 10px; }
-      /* line 266, ../partials/_layout.scss */
+      /* line 267, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text .fixed-header-left p {
         font-family: "RBNo2.1a-medium";
         font-size: 19px;
         line-height: 26px; }
-    /* line 272, ../partials/_layout.scss */
+    /* line 273, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .fixed-header-right {
       text-align: right;
       min-width: 130px;
       display: none; }
       @media (min-width: 768px) {
-        /* line 272, ../partials/_layout.scss */
+        /* line 273, ../partials/_layout.scss */
         .portfolio-page .fixed-header-text .fixed-header-right {
           display: inline-block; } }
-      /* line 279, ../partials/_layout.scss */
+      /* line 280, ../partials/_layout.scss */
       .portfolio-page .fixed-header-text .fixed-header-right p {
         font-size: 22px;
         line-height: 22px;
         font-family: "RBNo2.1a-BookItalic";
         color: #ce534d; }
-    /* line 286, ../partials/_layout.scss */
+    /* line 287, ../partials/_layout.scss */
     .portfolio-page .fixed-header-text .divider {
       height: 2px;
       width: 100%;
       background-color: #ce534d;
       margin-top: 10px; }
 
-/* line 302, ../partials/_layout.scss */
+/* line 303, ../partials/_layout.scss */
 .portfolio-content h1, .portfolio-content h2, .portfolio-content h3, .portfolio-content h4 {
   letter-spacing: 1.1px; }
-/* line 305, ../partials/_layout.scss */
+/* line 306, ../partials/_layout.scss */
 .portfolio-content h1 {
   font-family: 'RBNo2.1a-Bold';
   font-size: 14pt;
   margin-bottom: 4px; }
-/* line 310, ../partials/_layout.scss */
+/* line 311, ../partials/_layout.scss */
 .portfolio-content h2 {
   font-family: 'RBNo2.1b-book';
   font-size: 14pt;
   line-height: 15pt;
   margin-bottom: 10px; }
-/* line 316, ../partials/_layout.scss */
+/* line 317, ../partials/_layout.scss */
 .portfolio-content h3 {
   font-family: 'Rene_Bieder-RBNo2.1a-LightItalic';
   font-size: 13pt;
   margin-bottom: 10px; }
-/* line 321, ../partials/_layout.scss */
+/* line 322, ../partials/_layout.scss */
 .portfolio-content h4 {
   font-family: 'RBNo2.1b-book';
   font-size: 12pt;
   margin-bottom: 10px; }
-/* line 326, ../partials/_layout.scss */
+/* line 327, ../partials/_layout.scss */
 .portfolio-content a {
   font-family: 'RBNo2.1a-BookItalic';
   border-bottom: 2px solid #64b6b1;
   font-size: 16pt;
   line-height: 17pt;
   margin-bottom: 6px; }
-/* line 334, ../partials/_layout.scss */
+/* line 335, ../partials/_layout.scss */
 .portfolio-content p {
   font-family: "RBNo2.1a-medium";
   font-size: 18px;
   margin-top: 0;
   margin-bottom: 8px;
   max-width: 1000px; }
-  /* line 340, ../partials/_layout.scss */
+  /* line 341, ../partials/_layout.scss */
   .portfolio-content p:last-of-type {
     margin-bottom: 18px; }
-/* line 344, ../partials/_layout.scss */
+/* line 345, ../partials/_layout.scss */
 .portfolio-content p > img {
   margin-bottom: 14px; }
-/* line 347, ../partials/_layout.scss */
+/* line 348, ../partials/_layout.scss */
 .portfolio-content img {
   margin-bottom: 14px; }
-/* line 350, ../partials/_layout.scss */
+/* line 351, ../partials/_layout.scss */
 .portfolio-content .video-wrapper {
   margin-bottom: 24px; }
 
-/* line 354, ../partials/_layout.scss */
+/* line 355, ../partials/_layout.scss */
 .portfolio-content:first-child {
   margin-top: 0; }
 
-/* line 358, ../partials/_layout.scss */
+/* line 359, ../partials/_layout.scss */
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
@@ -1089,17 +1090,17 @@ section, .flex {
   padding-left: 15px;
   padding-right: 15px; }
 
-/* line 365, ../partials/_layout.scss */
+/* line 366, ../partials/_layout.scss */
 .page-wrap:after {
   content: "";
   display: block; }
 
-/* line 369, ../partials/_layout.scss */
+/* line 370, ../partials/_layout.scss */
 .site-footer, .page-wrap:after {
   /* .push must be the same height as footer */
   height: 30px; }
 
-/* line 373, ../partials/_layout.scss */
+/* line 374, ../partials/_layout.scss */
 .site-footer {
   width: 100%;
   text-align: center;
@@ -1107,19 +1108,19 @@ section, .flex {
   line-height: 20px;
   color: #7e7868; }
 
-/* line 381, ../partials/_layout.scss */
+/* line 382, ../partials/_layout.scss */
 .resume-container {
   text-align: center; }
-  /* line 383, ../partials/_layout.scss */
+  /* line 384, ../partials/_layout.scss */
   .resume-container h2 {
     font-size: 34pt;
     padding-top: 221px;
     letter-spacing: 1px; }
 
-/* line 390, ../partials/_layout.scss */
+/* line 391, ../partials/_layout.scss */
 .resume-headers {
   margin-top: 60px; }
-  /* line 392, ../partials/_layout.scss */
+  /* line 393, ../partials/_layout.scss */
   .resume-headers.left {
     margin-left: 8.33333%;
     -moz-box-sizing: border-box;
@@ -1129,10 +1130,10 @@ section, .flex {
     float: left;
     padding-left: 0.3125em;
     padding-right: 0.3125em; }
-    /* line 395, ../partials/_layout.scss */
+    /* line 396, ../partials/_layout.scss */
     .resume-headers.left .divider {
       width: 232px; }
-  /* line 399, ../partials/_layout.scss */
+  /* line 400, ../partials/_layout.scss */
   .resume-headers.right {
     margin-left: 16.66667%;
     -moz-box-sizing: border-box;
@@ -1142,10 +1143,10 @@ section, .flex {
     float: left;
     padding-left: 0.3125em;
     padding-right: 0.3125em; }
-    /* line 402, ../partials/_layout.scss */
+    /* line 403, ../partials/_layout.scss */
     .resume-headers.right .divider {
       width: 216px; }
-  /* line 407, ../partials/_layout.scss */
+  /* line 408, ../partials/_layout.scss */
   .resume-headers .divider {
     margin: 0 auto;
     text-align: center;
@@ -1153,21 +1154,21 @@ section, .flex {
     height: 7px;
     margin-top: 3px;
     margin-bottom: 23px; }
-  /* line 421, ../partials/_layout.scss */
+  /* line 422, ../partials/_layout.scss */
   .resume-headers h3 a {
     font-size: 32pt;
     font-family: "RBNo2Light";
     letter-spacing: -.15px; }
-  /* line 426, ../partials/_layout.scss */
+  /* line 427, ../partials/_layout.scss */
   .resume-headers span {
     margin-left: 5px;
     margin-right: 3px;
     letter-spacing: -2px; }
-  /* line 432, ../partials/_layout.scss */
+  /* line 433, ../partials/_layout.scss */
   .resume-headers span:last-of-type {
     margin-right: 5; }
 
-/* line 437, ../partials/_layout.scss */
+/* line 438, ../partials/_layout.scss */
 .resume {
   position: relative;
   margin-left: 8.33333%;
@@ -1179,7 +1180,7 @@ section, .flex {
   padding-left: 0.3125em;
   padding-right: 0.3125em;
   text-align: center; }
-  /* line 442, ../partials/_layout.scss */
+  /* line 443, ../partials/_layout.scss */
   .resume:last-of-type {
     margin-left: 16.66667%;
     -moz-box-sizing: border-box;
@@ -1189,21 +1190,21 @@ section, .flex {
     float: left;
     padding-left: 0.3125em;
     padding-right: 0.3125em; }
-  /* line 446, ../partials/_layout.scss */
+  /* line 447, ../partials/_layout.scss */
   .resume img {
     max-width: 100%; }
-  /* line 450, ../partials/_layout.scss */
+  /* line 451, ../partials/_layout.scss */
   .resume .divider {
     background-color: #64b6b1;
     height: 7px;
     width: 100%;
     margin-bottom: 23px; }
 
-/* line 458, ../partials/_layout.scss */
+/* line 459, ../partials/_layout.scss */
 .resume-image {
   display: inline-block;
   cursor: zoom-in; }
-  /* line 459, ../partials/_layout.scss */
+  /* line 460, ../partials/_layout.scss */
   .resume-image div {
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1217,7 +1218,7 @@ section, .flex {
     font-size: 21pt;
     letter-spacing: 2px; }
 
-/* line 476, ../partials/_layout.scss */
+/* line 477, ../partials/_layout.scss */
 .image-content {
   max-width: 1000px; }
 
