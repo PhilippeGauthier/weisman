@@ -43,13 +43,16 @@
 	}
 	.details {
 		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
 		@include break;
 		@include breakpoint($large) {
 			text-align: left;
+			margin-left: -8px;
+			margin-right: 5px;
 		}
 		// width: 221px;
-		margin-left: -8px;
-		margin-right: 5px;
+
 		text-align: left;
 		display: inline-block;
 		h2 {
@@ -82,13 +85,16 @@
 	.contact {
 		@include break;
 		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
 		@include breakpoint($large) {
 			text-align: left;
+					margin-left: 8px;
+		margin-top: 16px;
 		}
 		// width: 283px;
 		display: inline-block;
-		margin-left: 8px;
-		margin-top: 16px !important;
+
 		li:hover .border {
 			width: 100%;
 			background-color: $red;
