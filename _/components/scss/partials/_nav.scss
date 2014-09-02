@@ -7,10 +7,17 @@
 	margin-top: 36px;
 	vertical-align: top;
 	position: relative;
-
+	img {
+		max-width: 100%;
+	}
 	&.left {
-		@include span (first 6);
-		text-align: right;
+		@include span(12);
+		text-align: center;
+		@include breakpoint($large) {
+			@include span (first 6);
+			text-align: right;
+		}
+		
 		padding-right: 0;
 		// padding-right: 30px;
 		.border {
@@ -19,15 +26,23 @@
 		}
 	}
 	&.right {
-		@include span(last 6);
+		@include span(12);
+		text-align: center;
+		@include breakpoint($large) {
+			@include span(last 6);
+		}
+		
 		// ul {
 		// 	margin-top: 8px;
 		// }
 	}
 	.details {
+		text-align: center;
+		@include break;
+		@include breakpoint($large) {
+			text-align: left;
+		}
 		// width: 221px;
-		float: left;
-		clear: left;
 		margin-left: -8px;
 		margin-right: 5px;
 		text-align: left;
@@ -60,6 +75,11 @@
 		}
 	}
 	.contact {
+		@include break;
+		text-align: center;
+		@include breakpoint($large) {
+			text-align: left;
+		}
 		// width: 283px;
 		display: inline-block;
 		margin-left: 8px;
