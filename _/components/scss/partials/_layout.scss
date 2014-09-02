@@ -193,7 +193,7 @@ section, .flex {
 	}
 	.fixed-header-text {
 		
-
+		padding-top: 10px;
 		@include span (12);
 		@include breakpoint($small) {
 			max-width: 420px;
