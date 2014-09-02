@@ -1465,7 +1465,12 @@ section, .flex {
     /* line 225, ../partials/_nav.scss */
     .content-nav-main .content-nav.right {
       float: right;
-      padding-right: 20px; }
-      /* line 228, ../partials/_nav.scss */
+      padding-right: 20px;
+      display: none; }
+      @media (min-width: 768px) {
+        /* line 225, ../partials/_nav.scss */
+        .content-nav-main .content-nav.right {
+          display: inline-block; } }
+      /* line 232, ../partials/_nav.scss */
       .content-nav-main .content-nav.right .border {
         width: 30px; }
