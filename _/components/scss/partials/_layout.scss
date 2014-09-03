@@ -194,6 +194,7 @@ section, .flex {
 	.fixed-header-text {
 		padding: 0;
 		padding-top: 10px;
+		@include gutter(0px);
 		@include span (12);
 		@include breakpoint($small) {
 			max-width: 420px;
@@ -201,6 +202,7 @@ section, .flex {
 		@include breakpoint($medium) {
 			max-width: 768px;
 			padding-top: 0;
+			padding: 0;
 			position: fixed;
 		}
 		@include breakpoint($large) {
