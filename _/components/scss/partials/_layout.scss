@@ -384,9 +384,14 @@ section, .flex {
 
 .resume-container {
 	text-align: center;
+	@include breakpoint($medium) {
+		h1 {
+			padding-top: 221px;
+		}
+	}
 	h2 {
 		font-size: 34pt;
-		padding-top: 221px;
+		
 		letter-spacing: 1px;
 	}
 }
