@@ -202,7 +202,6 @@ section, .flex {
 		@include breakpoint($medium) {
 			max-width: 768px;
 			padding-top: 0;
-			padding: 0;
 			position: fixed;
 		}
 		@include breakpoint($large) {
