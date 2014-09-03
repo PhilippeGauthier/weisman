@@ -391,14 +391,14 @@ section, .flex {
 	}
 	h2 {
 		font-size: 34pt;
-		
+		padding-top: 30px;
 		letter-spacing: 1px;
 	}
 }
 
 .resume-headers {
 	margin-top: 60px;
-	@include full;
+	@include 
 	@include breakpoint($medium) {
 		&.left {
 			@include pre(1);
@@ -431,6 +431,9 @@ section, .flex {
 	// .divider:last-of-type {
 	// 	width: 216px;
 	// }
+	h3 {
+		display: inline-block;
+	}
 	h3 a{
 		font-size: 32pt;
 		font-family: "RBNo2Light";
