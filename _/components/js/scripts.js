@@ -132,7 +132,7 @@ if ($(window).width() > 768) {
     var headerHeight = $('.fixed-header-text').outerHeight();
     $('.portfolio-content').css("padding-top",headerHeight+'px');
   });
-}
+};
 
 $(".image-content img").load(function(){
     var width = $(this).width();
