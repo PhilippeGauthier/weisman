@@ -393,6 +393,10 @@ section, .flex {
 
 .resume-headers {
 	margin-top: 60px;
+	display: block;
+	@include breakpoint($medium) {
+		display: inline-block;
+	}
 	&.left {
 		@include pre(1);
 		@include span(4);	
