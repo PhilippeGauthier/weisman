@@ -1181,37 +1181,41 @@ section, .flex {
 /* line 394, ../partials/_layout.scss */
 .resume-headers {
   margin-top: 60px;
-  display: block; }
+  clear: both;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.3125em;
+  padding-right: 0.3125em; }
   @media (min-width: 768px) {
-    /* line 394, ../partials/_layout.scss */
-    .resume-headers {
-      display: inline-block; } }
-  /* line 400, ../partials/_layout.scss */
-  .resume-headers.left {
-    margin-left: 8.33333%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 33.33333%;
-    float: left;
-    padding-left: 0.3125em;
-    padding-right: 0.3125em; }
-    /* line 403, ../partials/_layout.scss */
-    .resume-headers.left .divider {
-      width: 232px; }
-  /* line 407, ../partials/_layout.scss */
-  .resume-headers.right {
-    margin-left: 16.66667%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 33.33333%;
-    float: left;
-    padding-left: 0.3125em;
-    padding-right: 0.3125em; }
-    /* line 410, ../partials/_layout.scss */
-    .resume-headers.right .divider {
-      width: 216px; }
+    /* line 398, ../partials/_layout.scss */
+    .resume-headers.left {
+      margin-left: 8.33333%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 33.33333%;
+      float: left;
+      padding-left: 0.3125em;
+      padding-right: 0.3125em; }
+      /* line 401, ../partials/_layout.scss */
+      .resume-headers.left .divider {
+        width: 232px; }
+    /* line 405, ../partials/_layout.scss */
+    .resume-headers.right {
+      margin-left: 16.66667%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 33.33333%;
+      float: left;
+      padding-left: 0.3125em;
+      padding-right: 0.3125em; }
+      /* line 408, ../partials/_layout.scss */
+      .resume-headers.right .divider {
+        width: 216px; } }
   /* line 415, ../partials/_layout.scss */
   .resume-headers .divider {
     margin: 0 auto;

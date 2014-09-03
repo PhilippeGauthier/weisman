@@ -393,24 +393,24 @@ section, .flex {
 
 .resume-headers {
 	margin-top: 60px;
-	display: block;
+	@include full;
 	@include breakpoint($medium) {
-		display: inline-block;
-	}
-	&.left {
-		@include pre(1);
-		@include span(4);	
-		.divider {
-			width: 232px;
+		&.left {
+			@include pre(1);
+			@include span(4);	
+			.divider {
+				width: 232px;
+			}
+		}
+		&.right {
+			@include pre(2);
+			@include span(4);	
+			.divider {
+				width: 216px;
+			}
 		}
 	}
-	&.right {
-		@include pre(2);
-		@include span(4);	
-		.divider {
-			width: 216px;
-		}
-	}
+
 
 	.divider {
 		margin: 0 auto;
