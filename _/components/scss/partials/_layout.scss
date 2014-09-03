@@ -439,13 +439,16 @@ section, .flex {
 	}
 }
 .resume {
-
+	display: none;
 	position: relative;
 	@include pre(1);
 	@include span(4);
 	&:last-of-type {
 		@include pre(2);
 		@include span(4);
+	}
+	@include breakpoint($medium) {
+		display: inline-block;
 	}
 	img {
 		max-width: 100%;

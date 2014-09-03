@@ -1173,6 +1173,7 @@ section, .flex {
 
 /* line 441, ../partials/_layout.scss */
 .resume {
+  display: none;
   position: relative;
   margin-left: 8.33333%;
   -moz-box-sizing: border-box;
@@ -1193,21 +1194,25 @@ section, .flex {
     float: left;
     padding-left: 0.3125em;
     padding-right: 0.3125em; }
-  /* line 450, ../partials/_layout.scss */
+  @media (min-width: 768px) {
+    /* line 441, ../partials/_layout.scss */
+    .resume {
+      display: inline-block; } }
+  /* line 453, ../partials/_layout.scss */
   .resume img {
     max-width: 100%; }
-  /* line 454, ../partials/_layout.scss */
+  /* line 457, ../partials/_layout.scss */
   .resume .divider {
     background-color: #64b6b1;
     height: 7px;
     width: 100%;
     margin-bottom: 23px; }
 
-/* line 462, ../partials/_layout.scss */
+/* line 465, ../partials/_layout.scss */
 .resume-image {
   display: inline-block;
   cursor: zoom-in; }
-  /* line 463, ../partials/_layout.scss */
+  /* line 466, ../partials/_layout.scss */
   .resume-image div {
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1221,7 +1226,7 @@ section, .flex {
     font-size: 21pt;
     letter-spacing: 2px; }
 
-/* line 480, ../partials/_layout.scss */
+/* line 483, ../partials/_layout.scss */
 .image-content {
   max-width: 1000px; }
 
