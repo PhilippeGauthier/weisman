@@ -398,7 +398,7 @@ section, .flex {
 
 .resume-headers {
 	margin-top: 60px;
-	@include 
+	@include full;
 	@include breakpoint($medium) {
 		&.left {
 			@include pre(1);
